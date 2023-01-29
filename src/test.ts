@@ -1,5 +1,5 @@
 export function test(arg: number): string {
-	console.log('Tessstt')
+	console.log('New')
 
 	return ''
 }
