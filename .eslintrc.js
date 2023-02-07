@@ -53,6 +53,7 @@ module.exports = {
       'error',
       { markupOnly: true, ignoreAttribute: ['to'] },
     ],
+    'max-len': ['error', { ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
