@@ -5,5 +5,8 @@
   "language": "Русский",
   "about-the-site": "О сайте",
   "home": "Главная",
-  "page-not-found": "Страница не найдена"
+  "page-not-found": "Страница не найдена",
+  "an-unforeseen-mistake-occurred": "Произошла непредвиденная ошибка",
+  "refresh-the-page": "Обновите страницу",
+  "throw-error": "бросить ошибку"
 }

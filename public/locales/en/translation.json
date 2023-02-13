@@ -5,5 +5,8 @@
   "language": "English",
   "about-the-site": "About the site",
   "home": "Home",
-  "page-not-found": "Page not found"
+  "page-not-found": "Page not found",
+  "an-unforeseen-mistake-occurred": "An unforeseen mistake occurred",
+  "refresh-the-page": "Refresh the page",
+  "throw-error": "throw error"
 }
