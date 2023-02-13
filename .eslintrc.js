@@ -51,9 +51,9 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'warn',
     'i18next/no-literal-string': [
       'error',
-      { markupOnly: true, ignoreAttribute: ['to'] },
+      { markupOnly: true, ignoreAttribute: ['to', 'data-testid'] },
     ],
-    'max-len': ['error', { ignoreComments: true }],
+    'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
     __IS_DEV__: true,

@@ -1,9 +1,8 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
-import webpack from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { ReactRefreshPlugin } from '@pmmmwh/react-refresh-webpack-plugin';
-import { BuildOptions } from './types/config';
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import webpack from 'webpack'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import { BuildOptions } from './types/config'
 
 export function buildPlugins({
   paths,
@@ -22,5 +21,8 @@ export function buildPlugins({
       __IS_DEV__: JSON.stringify(isDev),
     }),
     new webpack.HotModuleReplacementPlugin(),
-  ];
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
+  ]
 }
