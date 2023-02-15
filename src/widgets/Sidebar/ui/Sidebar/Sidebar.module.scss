@@ -2,7 +2,9 @@
   position: relative;
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
-  background: var(--inverted-bg-color);
+
+  // background: var(--inverted-bg-color);
+  background: red;
   transition: width 0.3s;
 }
 
