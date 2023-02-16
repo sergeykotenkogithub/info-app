@@ -5,12 +5,11 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  pipeline:
+  typescript:
     runs-on: windows-2019
     strategy:
       matrix:
         node-version: [17.x]
-
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -18,21 +17,64 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm install
+        run: npm ci
       - name: build production project
         run: npm run build:prod
-        if: always()
       - name: linting typescript
         run: npm run lint:ts
-        if: always()
+
+  scss:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm ci
+      - name: build production project
+        run: npm run build:prod
       - name: linting css
         run: npm run lint:scss
+
+  testing:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm ci
+      - name: build production project
+        run: npm run build:prod
       - name: unit testing
-        if: always()
         run: npm run test:unit
+
+  storybook:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm ci
+      - name: build production project
+        run: npm run build:prod
       - name: build storybook
         run: npm run storybook:build
-        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
-        if: always()
