@@ -23,6 +23,7 @@
     "./config/jest/setupTests.ts",
     "./src/**/*.ts",
     "./config/**/*.ts",
-    "./src/**/*.tsx"
+    "./src/**/*.tsx",
+    "config/jest/jestEmptyComponent.tsx"
   ]
 }

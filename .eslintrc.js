@@ -17,20 +17,22 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
     indent: [2, 2],
-    semi: 'off',
-    '@typescript-eslint/semi': 'off',
+    semi: 'off', // точка с запятой
+    '@typescript-eslint/semi': 'off', // точка с запятой
     'react/function-component-definition': [
+      // вызов стрелочной функции вместо function
       2,
       {
         namedComponents: 'arrow-function',
         unnamedComponents: 'arrow-function',
       },
     ],
+
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': [
@@ -55,8 +57,8 @@ module.exports = {
     'i18next/no-literal-string': [
       'error',
       {
+        ignoreAttribute: ['data-testid', 'to'],
         markupOnly: true,
-        ignoreAttribute: ['to', 'data-testid'],
       },
     ],
     'max-len': [

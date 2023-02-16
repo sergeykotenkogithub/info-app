@@ -8,5 +8,6 @@
   "page-not-found": "Страница не найдена",
   "an-unforeseen-mistake-occurred": "Произошла непредвиденная ошибка",
   "refresh-the-page": "Обновите страницу",
-  "throw-error": "бросить ошибку"
+  "throw-error": "бросить ошибку",
+  "toggle": "Переключать"
 }

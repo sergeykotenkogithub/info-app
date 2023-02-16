@@ -8,5 +8,6 @@
   "page-not-found": "Page not found",
   "an-unforeseen-mistake-occurred": "An unforeseen mistake occurred",
   "refresh-the-page": "Refresh the page",
-  "throw-error": "throw error"
+  "throw-error": "throw error",
+  "toggle": "Toggle"
 }
