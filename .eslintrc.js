@@ -61,6 +61,7 @@ module.exports = {
         markupOnly: true,
       },
     ],
+    'linebreak-style': 0,
     'max-len': [
       'error',
       {
