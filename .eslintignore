@@ -10,3 +10,4 @@ node_modules
 webpack.config.ts
 jest.config.ts
 storybook
+scripts
