@@ -63,6 +63,8 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
         <ThemeSwitcher />
         <LangSwitcher short={collapsed} className={cls.lang} />
       </div>
+
+      <div>{'><'}</div>
     </div>
   )
 }
