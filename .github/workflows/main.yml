@@ -12,14 +12,12 @@ jobs:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm ci
-      - name: build production project
-        run: npm run build:prod
       - name: linting typescript
         run: npm run lint:ts
 
@@ -30,14 +28,12 @@ jobs:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm ci
-      - name: build production project
-        run: npm run build:prod
       - name: linting css
         run: npm run lint:scss
 
@@ -48,14 +44,12 @@ jobs:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm ci
-      - name: build production project
-        run: npm run build:prod
       - name: unit testing
         run: npm run test:unit
 
@@ -66,7 +60,7 @@ jobs:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
