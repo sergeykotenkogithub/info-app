@@ -1,5 +1,4 @@
 import { FC, Suspense } from 'react'
-import './styles/index.scss'
 
 import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -14,6 +13,7 @@ const App: FC = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
+
         <div className="content-page">
           <Sidebar />
           <AppRouter />

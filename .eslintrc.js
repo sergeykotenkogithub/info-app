@@ -17,7 +17,7 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -69,15 +69,20 @@ module.exports = {
         code: 100,
       },
     ],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
   },
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
+        'max-len': 'off',
       },
     },
   ],
