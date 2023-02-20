@@ -11,3 +11,4 @@ webpack.config.ts
 jest.config.ts
 storybook
 scripts
+json-server
