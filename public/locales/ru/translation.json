@@ -12,5 +12,7 @@
   "toggle": "Переключать",
   "short-lang": "Ру",
   "to-come-in": "Войти",
-  "lorem": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. \nAsperiores iure inventorye, impedit quas consectetur praesentium rerum tempora sunt mollitia Differentio incidunt molestias saepe. \nДолорибус, предусмотрительный рацион! \nImpedit rem natus dolorum!"
+  "lorem": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. \nAsperiores iure inventorye, impedit quas consectetur praesentium rerum tempora sunt mollitia Differentio incidunt molestias saepe. \nДолорибус, предусмотрительный рацион! \nImpedit rem natus dolorum!",
+  "increment": "приращение",
+  "decrement": "уменьшение"
 }

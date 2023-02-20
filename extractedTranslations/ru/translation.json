@@ -1,8 +1,11 @@
 {
   "about-the-site": "about-the-site",
   "an-unforeseen-mistake-occurred": "an-unforeseen-mistake-occurred",
+  "decrement": "decrement",
   "home": "home",
+  "increment": "инкремент",
   "language": "language",
+  "lorem": "lorem",
   "page-not-found": "page-not-found",
   "refresh-the-page": "refresh-the-page",
   "the-main-page": "the-main-page",
