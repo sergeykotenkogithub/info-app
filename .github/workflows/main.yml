@@ -12,11 +12,17 @@ jobs:
         node-version: [17.x]
 
     steps:
+      - name: Cache description
+        uses: action/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: install modules
         run: npm ci
       - name: build production project
