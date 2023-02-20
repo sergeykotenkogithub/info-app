@@ -26,7 +26,9 @@ export const Navbar = ({ className }: NavbarProps) => {
       >
         {t('to-come-in')}
       </Button>
-      <Modal isOpen={isAuthModal} onClose={onToggleModal} />
+      <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+        {t('lorem')}
+      </Modal>
     </div>
   )
 }
