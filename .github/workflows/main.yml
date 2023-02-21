@@ -5,12 +5,11 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  pipeline:
-    runs-on: ubuntu-latest
+  typescript:
+    runs-on: windows-2019
     strategy:
       matrix:
         node-version: [17.x]
-
     steps:
       - name: Cache deps
         uses: actions/cache@v3
@@ -18,27 +17,78 @@ jobs:
           path: ~/.npm
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm ci
+      - name: linting typescript
+        run: npm run lint:ts
 
+  scss:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/checkout@v2
+      - name: Starting Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm ci
+      - name: linting css
+        run: npm run lint:scss
+
+  testing:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/checkout@v2
+      - name: Starting Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm ci
+      - name: unit testing
+        run: npm run test:unit
+
+  storybook:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [17.x]
+    steps:
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/checkout@v2
+      - name: Starting Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm ci
       - name: build production project
         run: npm run build:prod
-        if: always()
-      - name: linting typescript
-        run: npm run lint:ts
-        if: always()
-      - name: linting css
-        run: npm run lint:scss
-      - name: unit testing
-        if: always()
-        run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
-        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
-        if: always()
