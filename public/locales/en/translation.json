@@ -14,5 +14,7 @@
   "to-come-in": "To come in",
   "lorem": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iure inventore, impedit quas consectetur praesentium rerum tempora sunt mollitia distinctio incidunt molestias saepe. Doloribus, provident ratione! Impedit rem natus dolorum!",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "enter-username": "Enter username",
+  "enter-password": "Enter password"
 }
