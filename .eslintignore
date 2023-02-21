@@ -12,3 +12,4 @@ jest.config.ts
 storybook
 scripts
 json-server
+.husky
