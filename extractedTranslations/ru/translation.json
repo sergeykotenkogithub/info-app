@@ -1,9 +1,11 @@
 {
   "about-the-site": "about-the-site",
   "an-unforeseen-mistake-occurred": "an-unforeseen-mistake-occurred",
+  "authorization-form": "authorization-form",
   "decrement": "decrement",
   "enter-password": "enter-password",
   "enter-username": "enter-username",
+  "go-out": "go-out",
   "home": "home",
   "increment": "инкремент",
   "language": "language",
@@ -12,5 +14,6 @@
   "refresh-the-page": "refresh-the-page",
   "the-main-page": "the-main-page",
   "throw-error": "throw-error",
-  "to-come-in": "to-come-in"
+  "to-come-in": "to-come-in",
+  "wrong-login-or-password": "wrong-login-or-password"
 }
