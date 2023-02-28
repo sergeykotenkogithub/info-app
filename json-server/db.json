@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Сергей",
+    "lastname": "Котенко",
+    "age": 34,
+    "currency": "RUB",
+    "country": "Russian",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://www.funnyart.club/uploads/posts/2022-12/1671721265_www-funnyart-club-p-panda-krasivie-kartinki-krutie-15.jpg"
+  }
 }

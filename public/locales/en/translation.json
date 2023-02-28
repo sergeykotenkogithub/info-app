@@ -19,5 +19,7 @@
   "enter-password": "Enter password",
   "authorization-form": "Authorization form",
   "wrong-login-or-password": "You introduced a wrong login or password",
-  "go-out": "Go out"
+  "go-out": "Go out",
+  "profile-page": "Profile Page",
+  "profile": "Profile"
 }
