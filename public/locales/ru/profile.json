@@ -2,5 +2,15 @@
   "profile": "Профиль",
   "edit": "Редактировать",
   "your-name": "Ваше имя",
-  "your-surname": "Ваша фамилия"
+  "your-surname": "Ваша фамилия",
+  "there-was-an-error": "При загрузке профиля произошла ошибка",
+  "try-to-update-the-page": "Попробуйте обновить страницу",
+  "cancel": "Отмена",
+  "save": "Сохранять",
+  "your-age": "Ваш возраст",
+  "city": "Город",
+  "enter-name-user": "Введите имя пользователя",
+  "enter-link-on-avatar": "Введите ссылку на аватарку",
+  "indicate-the-currency": "Укажите валюту",
+  "indicate-the-country": "Укажите страну"
 }

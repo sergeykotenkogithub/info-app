@@ -2,5 +2,15 @@
   "profile": "Profile",
   "edit": "Edit",
   "your-name": "Your name",
-  "your-surname": "Your surname"
+  "your-surname": "Your surname",
+  "there-was-an-error": "There was an error when loading the profile",
+  "try-to-update-the-page": "Try to update the page",
+  "cancel": "Cancel",
+  "save": "Save",
+  "your-age": "Your age",
+  "city": "City",
+  "enter-name-user": "Enter name user",
+  "enter-link-on-avatar": "Enter link on avatar",
+  "indicate-the-currency": "Indicate the currency",
+  "indicate-the-country": "Indicate the country"
 }

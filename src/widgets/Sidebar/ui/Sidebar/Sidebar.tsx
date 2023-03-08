@@ -1,6 +1,6 @@
 import { LangSwitcher } from 'features/ui/LangSwitcher/LangSwitcher'
 import { ThemeSwitcher } from 'features/ui/ThemeSwitcher'
-import { memo, useState } from 'react'
+import { memo, useMemo, useState } from 'react'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
@@ -20,6 +20,15 @@ export const Sidebar: React.FC<SidebarProps> = memo((props) => {
     setCollapsed((prev) => !prev)
   }
 
+  const itemsList = useMemo(
+    () =>
+      // eslint-disable-next-line implicit-arrow-linebreak
+      SidebarItemList.map((item) => (
+        <SidebarItem item={item} collapsed={collapsed} key={item.path} />
+      )),
+    [collapsed]
+  )
+
   return (
     <div
       data-testid="sidebar"
@@ -37,11 +46,7 @@ export const Sidebar: React.FC<SidebarProps> = memo((props) => {
       >
         {collapsed ? '>' : '<'}
       </Button>
-      <div className={cls.items}>
-        {SidebarItemList.map((item) => (
-          <SidebarItem item={item} collapsed={collapsed} key={item.path} />
-        ))}
-      </div>
+      <div className={cls.items}>{itemsList}</div>
 
       <div className={cls.switchers}>
         <ThemeSwitcher />
