@@ -12,5 +12,10 @@
   "enter-name-user": "Введите имя пользователя",
   "enter-link-on-avatar": "Введите ссылку на аватарку",
   "indicate-the-currency": "Укажите валюту",
-  "indicate-the-country": "Укажите страну"
+  "indicate-the-country": "Укажите страну",
+  "incorrect-age": "Неверный возраст",
+  "name-and-surname-are-required": "Имя и фамилия обязательны",
+  "data-is-not-indicated": "Данные не указаны",
+  "incorrect-region": "Неверный регион",
+  "server-error-while-maintaining": "Ошибка сервера при обслуживании"
 }

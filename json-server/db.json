@@ -26,8 +26,8 @@
     }
   ],
   "profile": {
-    "first": "Сергей",
-    "lastname": "Котенко",
+    "first": "Тест",
+    "lastname": "Тестович",
     "age": 32,
     "currency": "RUB",
     "country": "Russia",

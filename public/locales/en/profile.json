@@ -12,5 +12,10 @@
   "enter-name-user": "Enter name user",
   "enter-link-on-avatar": "Enter link on avatar",
   "indicate-the-currency": "Indicate the currency",
-  "indicate-the-country": "Indicate the country"
+  "indicate-the-country": "Indicate the country",
+  "incorrect-age": "Incorrect age",
+  "name-and-surname-are-required": "Name and surname are required",
+  "data-is-not-indicated": "Data is not indicated",
+  "incorrect-region": "Incorrect region",
+  "server-error-while-maintaining": "Server error while maintaining"
 }
