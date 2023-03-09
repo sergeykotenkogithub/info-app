@@ -2,7 +2,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
-import avatar from 'shared/assets/tests/avatar.jpg'
 import { ProfileCard } from './ProfileCard'
 
 export default {
@@ -27,7 +26,8 @@ Primary.args = {
     first: 'asd',
     city: 'asw',
     currency: Currency.EUR,
-    avatar,
+    avatar:
+      'https://corporateofficeheadquarters.org/wp-content/uploads/2021/05/Sam-Richman.jpg',
   },
 }
 
