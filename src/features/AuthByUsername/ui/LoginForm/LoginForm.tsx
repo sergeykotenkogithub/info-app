@@ -1,4 +1,4 @@
-import { FC, memo, useCallback } from 'react'
+import { FC, memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -56,6 +56,22 @@ const LoginForm: FC<LoginFormProps> = memo((props) => {
       onSuccess()
     }
   }, [dispatch, password, username, onSuccess])
+
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        onLoginClick()
+      }
+    },
+    [onLoginClick]
+  )
+
+  useEffect(() => {
+    window.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [onKeyDown])
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
