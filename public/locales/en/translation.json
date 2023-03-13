@@ -22,6 +22,7 @@
   "go-out": "Go out",
   "profile-page": "Profile Page",
   "profile": "Profile",
+  "article": "Article",
   "there-was-an-error": "There was an error when loading the profile",
   "try-to-update-the-page": "Try to update the page"
 }
