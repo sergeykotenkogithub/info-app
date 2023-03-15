@@ -9,6 +9,7 @@ interface ArticleImageBlockComponentProps {
   block: ArticleImageBlock
 }
 
+// eslint-disable-next-line operator-linebreak
 export const ArticleImageBlockComponent: FC<ArticleImageBlockComponentProps> =
   memo((props) => {
     const { className, block } = props
