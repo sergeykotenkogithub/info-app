@@ -24,5 +24,6 @@
   "profile": "Profile",
   "article": "Article",
   "there-was-an-error": "There was an error when loading the profile",
-  "try-to-update-the-page": "Try to update the page"
+  "try-to-update-the-page": "Try to update the page",
+  "there-is-no-comment": "There is no comment"
 }

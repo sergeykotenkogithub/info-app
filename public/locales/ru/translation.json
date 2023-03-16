@@ -24,5 +24,6 @@
   "profile": "Профиль",
   "article": "Статьи",
   "there-was-an-error": "При загрузке профиля произошла ошибка",
-  "try-to-update-the-page": "Попробуйте обновить страницу"
+  "try-to-update-the-page": "Попробуйте обновить страницу",
+  "there-is-no-comment": "Комментарий отсутствует"
 }

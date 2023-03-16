@@ -1,4 +1,5 @@
 {
+  "a-comment": "a-comment",
   "about-the-site": "about-the-site",
   "an-unforeseen-mistake-occurred": "an-unforeseen-mistake-occurred",
   "authorization-form": "",
@@ -29,6 +30,7 @@
   "server-error-while-maintaining": "server-error-while-maintaining",
   "the-article-was-not-found": "the-article-was-not-found",
   "the-main-page": "the-main-page",
+  "there-is-no-comment": "there-is-no-comment",
   "there-was-an-error": "there-was-an-error",
   "there-was-an-error-when-loading": "",
   "throw-error": "throw-error",
