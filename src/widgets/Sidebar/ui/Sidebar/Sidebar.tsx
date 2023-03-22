@@ -1,10 +1,11 @@
 import { LangSwitcher } from 'features/ui/LangSwitcher/LangSwitcher'
 import { ThemeSwitcher } from 'features/ui/ThemeSwitcher'
-import { memo, useMemo, useState } from 'react'
+import { FC, memo, useMemo, useState } from 'react'
 
+import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
-import { SidebarItemList } from 'widgets/Sidebar/model/items'
+import { getSidebarItems } from '../../model/selectors/getSidebarItems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
 import cls from './Sidebar.module.scss'
 
@@ -12,9 +13,10 @@ interface SidebarProps {
   className?: string
 }
 
-export const Sidebar: React.FC<SidebarProps> = memo((props) => {
+export const Sidebar: FC<SidebarProps> = memo((props) => {
   const { className } = props
   const [collapsed, setCollapsed] = useState(false)
+  const sidebarItemsList = useSelector(getSidebarItems)
 
   const onToggle = () => {
     setCollapsed((prev) => !prev)
@@ -23,10 +25,10 @@ export const Sidebar: React.FC<SidebarProps> = memo((props) => {
   const itemsList = useMemo(
     () =>
       // eslint-disable-next-line implicit-arrow-linebreak
-      SidebarItemList.map((item) => (
+      sidebarItemsList.map((item) => (
         <SidebarItem item={item} collapsed={collapsed} key={item.path} />
       )),
-    [collapsed]
+    [collapsed, sidebarItemsList]
   )
 
   return (
