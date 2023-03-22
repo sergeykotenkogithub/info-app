@@ -25,5 +25,7 @@
   "article": "Статьи",
   "there-was-an-error": "При загрузке профиля произошла ошибка",
   "try-to-update-the-page": "Попробуйте обновить страницу",
-  "there-is-no-comment": "Комментарий отсутствует"
+  "there-is-no-comment": "Комментарий отсутствует",
+  "enter-the-text-of-the-comment": "Введите текст комментария",
+  "send": "Отправлять"
 }

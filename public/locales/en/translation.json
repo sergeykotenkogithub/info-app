@@ -25,5 +25,7 @@
   "article": "Article",
   "there-was-an-error": "There was an error when loading the profile",
   "try-to-update-the-page": "Try to update the page",
-  "there-is-no-comment": "There is no comment"
+  "there-is-no-comment": "There is no comment",
+  "enter-the-text-of-the-comment": "Enter the text of the comment",
+  "send": "Send"
 }

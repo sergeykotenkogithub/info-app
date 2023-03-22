@@ -1,7 +1,9 @@
 import { ArticleDetails } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
-import { fetchCommentByArticleId } from 'pages/ArticleDetailPage/model/services/fetchCommentByArticleId'
-import { memo } from 'react'
+import { AddCommentForm } from 'features/addCommentForm'
+// eslint-disable-next-line max-len
+// eslint-disable-next-line max-len
+import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
@@ -13,6 +15,8 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Text } from 'shared/ui/Text/Text'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { fetchCommentByArticleId } from '../../model/services/fetchCommentByArticleId/fetchCommentByArticleId'
 import {
   articleDetailsCommentsReducer,
   getArticleComments,
@@ -35,6 +39,13 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
   const comments = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
 
+  const onSendComment = useCallback(
+    (text: string) => {
+      dispatch(addCommentForArticle(text))
+    },
+    [dispatch]
+  )
+
   useInitialEffect(() => {
     dispatch(fetchCommentByArticleId(id))
   })
@@ -52,6 +63,7 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
       <div className={classNames(cls.articleDetailPage, {}, [className])}>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('a-comment')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
       </div>
     </DynamicModuleLoader>
