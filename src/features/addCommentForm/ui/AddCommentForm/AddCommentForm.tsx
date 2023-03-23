@@ -52,7 +52,7 @@ const AddCommentForm = (props: AddCommentFormProps) => {
         <Input
           className={cls.input}
           placeholder={t('enter-the-text-of-the-comment')}
-          value={text}
+          value={text || ''}
           onChange={onCommentTextChange}
         />
         <Button onClick={onSendHandler}>{t('send')}</Button>

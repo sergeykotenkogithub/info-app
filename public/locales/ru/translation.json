@@ -19,7 +19,7 @@
   "enter-username": "Введите username",
   "authorization-form": "Форма авторизации",
   "wrong-login-or-password": "Вы ввели неверный логин или пароль",
-  "go-out": "Выходить",
+  "go-out": "Выйти",
   "profile-page": "Страница профиля",
   "profile": "Профиль",
   "article": "Статьи",
@@ -27,5 +27,6 @@
   "try-to-update-the-page": "Попробуйте обновить страницу",
   "there-is-no-comment": "Комментарий отсутствует",
   "enter-the-text-of-the-comment": "Введите текст комментария",
-  "send": "Отправлять"
+  "send": "Отправлять",
+  "read-more": "Читать далее..."
 }
