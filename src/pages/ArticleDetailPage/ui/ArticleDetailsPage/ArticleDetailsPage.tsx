@@ -15,6 +15,7 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Button } from 'shared/ui/Button/Button'
+import { Page } from 'shared/ui/Page/Page'
 import { Text } from 'shared/ui/Text/Text'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
@@ -59,21 +60,21 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.articleDetailPage, {}, [className])}>
+      <Page className={classNames(cls.articleDetailPage, {}, [className])}>
         {t('the-article-was-not-found')}
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.articleDetailPage, {}, [className])}>
+      <Page className={classNames(cls.articleDetailPage, {}, [className])}>
         <Button onClick={onBackToList}>{t('back-to-the-list')}</Button>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('a-comment')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
