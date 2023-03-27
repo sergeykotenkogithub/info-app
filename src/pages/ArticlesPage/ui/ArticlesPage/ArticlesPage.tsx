@@ -1,5 +1,4 @@
 import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article'
-import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetcNextArticlesPage/fetchNextArticlesPage'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -16,7 +15,8 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
+import { fetchNextArticlesPage } from '../../model/services/fetcNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import {
   articlesPageActions,
   articlesPageReducer,
@@ -49,20 +49,17 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   )
 
   const onLoadNextPart = useCallback(() => {
-    dispatch(fetchNextArticlesPage())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchNextArticlesPage())
+    }
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(
-      fetchArticlesList({
-        page: 1,
-      })
-    )
+    dispatch(initArticlesPage())
   })
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}
