@@ -12,12 +12,14 @@ import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { LoginSchema } from 'features/AuthByUsername'
 import { AddCommentFormSchema } from 'features/addCommentForm'
+import { ScrollSaveSchema } from 'features/ui/ScrollSave'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailPage'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
+  scrollSave: ScrollSaveSchema
 
   // асинхронные редюсеры
   loginForm?: LoginSchema
