@@ -1,9 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { Page } from './Page'
 
 export default {
-  title: 'shared/Page',
+  title: 'widget/Page',
   component: Page,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -14,3 +15,8 @@ const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />
 
 export const Normal = Template.bind({})
 Normal.args = {}
+Normal.decorators = [
+  StoreDecorator({
+    scrollSave: { scroll: { '/articles(pin)': 0 } },
+  }),
+]
