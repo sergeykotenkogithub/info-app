@@ -1,29 +1,31 @@
-import { ChangeEvent, FC, memo, useMemo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { ChangeEvent, useMemo } from 'react'
+import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Select.module.scss'
 
-export interface SelectOption {
-  value: string
+export interface SelectOption<T extends string> {
+  value: T
   content: string
 }
 
-interface SelectProps {
+interface SelectProps<T extends string> {
   className?: string
   label?: string
-  options?: SelectOption[]
-  value?: string
-  onChange?: (value: string) => void
+  options?: SelectOption<T>[]
+  value?: T
+  onChange?: (value: T) => void
   readonly?: boolean
 }
 
-export const Select: FC<SelectProps> = memo((props) => {
-  const { className, label, options, value, onChange, readonly } = props
+export const Select = <T extends string>(props: SelectProps<T>) => {
+  const { className, label, options, onChange, value, readonly } = props
 
   const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-    onChange?.(e.target.value)
+    if (onChange) {
+      onChange(e.target.value as T)
+    }
   }
 
-  const optionList = useMemo(
+  const optionsList = useMemo(
     () =>
       // eslint-disable-next-line implicit-arrow-linebreak
       options?.map((opt) => (
@@ -34,17 +36,19 @@ export const Select: FC<SelectProps> = memo((props) => {
     [options]
   )
 
+  const mods: Mods = {}
+
   return (
-    <div className={classNames(cls.wrapper, {}, [className])}>
+    <div className={classNames(cls.Wrapper, mods, [className])}>
       {label && <span className={cls.label}>{`${label}>`}</span>}
       <select
+        disabled={readonly}
         className={cls.select}
         value={value}
         onChange={onChangeHandler}
-        disabled={readonly}
       >
-        {optionList}
+        {optionsList}
       </select>
     </div>
   )
-})
+}
