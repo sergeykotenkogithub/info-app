@@ -57,7 +57,7 @@ module.exports = {
     'i18next/no-literal-string': [
       'error',
       {
-        ignoreAttribute: ['data-testid', 'to', 'name'],
+        ignoreAttribute: ['data-testid', 'to', 'name', 'target'],
         markupOnly: true,
       },
     ],
@@ -66,7 +66,7 @@ module.exports = {
       'error',
       {
         ignoreComments: true,
-        code: 120,
+        code: 140,
       },
     ],
     'jsx-a11y/no-static-element-interactions': 'off',
@@ -76,6 +76,9 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    //new
+    'implicit-arrow-linebreak': 'off',
+    'operator-linebreak': 'off',
   },
   globals: {
     __IS_DEV__: true,

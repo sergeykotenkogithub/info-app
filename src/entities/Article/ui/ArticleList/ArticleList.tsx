@@ -1,3 +1,4 @@
+import { HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Text, TextSize } from 'shared/ui/Text/Text'
@@ -11,10 +12,10 @@ interface ArticleListProps {
   articles: Article[]
   isLoading?: boolean
   view?: ArticleView
+  target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) =>
-  // eslint-disable-next-line implicit-arrow-linebreak
   new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
     .map((item, index) => (
@@ -22,7 +23,13 @@ const getSkeletons = (view: ArticleView) =>
     ))
 
 export const ArticleList = (props: ArticleListProps) => {
-  const { className, articles, isLoading, view = ArticleView.SMALL } = props
+  const {
+    className,
+    articles,
+    isLoading,
+    view = ArticleView.SMALL,
+    target,
+  } = props
   const { t } = useTranslation()
 
   const renderArticle = (article: Article) => (
@@ -31,6 +38,7 @@ export const ArticleList = (props: ArticleListProps) => {
       view={view}
       className={cls.card}
       key={article.id}
+      target={target}
     />
   )
 
