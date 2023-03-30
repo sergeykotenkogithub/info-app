@@ -6,15 +6,13 @@ import { AddCommentForm } from 'features/addCommentForm'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
-import { RouterPath } from 'shared/config/routeConfig/routeConfig'
+import { useParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Button } from 'shared/ui/Button/Button'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { Page } from 'widgets/Page/Page'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
@@ -25,6 +23,7 @@ import { fetchCommentByArticleId } from '../../model/services/fetchCommentByArti
 import { articleDetailsPageReducer } from '../../model/slice'
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
 import { getArticleRecommendations } from '../../model/slice/articleDetailsPageRecommendationsSlice'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import cls from './ArticleDetailsPage.module.scss'
 
 interface ArticleDetailPageProps {
@@ -46,11 +45,6 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
   const recommendationsIsLoading = useSelector(
     getArticleRecommendationsIsLoading
   )
-  const navigate = useNavigate()
-
-  const onBackToList = useCallback(() => {
-    navigate(RouterPath.articles)
-  }, [navigate])
 
   const onSendComment = useCallback(
     (text: string) => {
@@ -75,7 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.articleDetailPage, {}, [className])}>
-        <Button onClick={onBackToList}>{t('back-to-the-list')}</Button>
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
         <Text
           size={TextSize.L}

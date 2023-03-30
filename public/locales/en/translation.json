@@ -42,5 +42,11 @@
   "Economic": "Economic",
   "Science": "Science",
   "articles-are-not-found": "Articles are not found",
-  "recommend": "Recommend"
+  "recommend": "Recommend",
+  "edit-main": "Edit",
+  "back-to-the-list": "Back to the list",
+  "creating-a-new-article": "Creating a new article",
+  "editing-an-article-with-id": "Editing an article with ID =",
+  "info-app": "Info App",
+  "create-article": "Create article"
 }

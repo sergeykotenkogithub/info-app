@@ -42,5 +42,11 @@
   "Economic": "Экономика",
   "Science": "Наука",
   "articles-are-not-found": "Статьи не найдены",
-  "recommend": "Рекомендовать"
+  "recommend": "Рекомендовать",
+  "edit-main": "Редактировать",
+  "back-to-the-list": "Назад к списку",
+  "creating-a-new-article": "Создание новой статьи",
+  "editing-an-article-with-id": "Редактирование статьи с ID =",
+  "info-app": "Info App",
+  "create-article": "Создать статью"
 }
