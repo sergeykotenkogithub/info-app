@@ -17,7 +17,13 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'sergey-kotenko-plugin',
+  ],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -79,6 +85,7 @@ module.exports = {
     //new
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
+    'sergey-kotenko-plugin/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
