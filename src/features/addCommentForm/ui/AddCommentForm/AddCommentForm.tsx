@@ -8,6 +8,7 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { Button } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
+import { HStack } from 'shared/ui/Stack'
 import {
   getAddCommentFormError,
   getAddCommentFormText,
@@ -48,7 +49,11 @@ const AddCommentForm = (props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.addCommentForm, {}, [className])}>
+      <HStack
+        justify="between"
+        max
+        className={classNames(cls.addCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           placeholder={t('enter-the-text-of-the-comment')}
@@ -56,7 +61,7 @@ const AddCommentForm = (props: AddCommentFormProps) => {
           onChange={onCommentTextChange}
         />
         <Button onClick={onSendHandler}>{t('send')}</Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   )
 }
