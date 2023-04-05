@@ -20,9 +20,7 @@
       "views": 1022,
       "createdAt": "26.04.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -88,13 +86,11 @@
       "id": "2",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://www.goubuntu.ru/wp-content/uploads/2019/03/python.png",
       "views": 5204,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -112,13 +108,11 @@
       "id": "3",
       "title": "Kotlin news 2019",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://pluspng.com/img-png/kotlin-logo-png-kotlin-collection-function-techshots-medium-1200x630.png",
       "views": 94002,
       "createdAt": "26.02.2019",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -136,13 +130,11 @@
       "id": "4",
       "title": "Scala news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://coursefreedl.com/wp-content/uploads/2020/01/Scala-Zero-To-Hero-Complete-Guide.jpg",
+      "img": "https://developer.worldpay.com/assets/images/articles/access-images/Slide1.PNG",
       "views": 10222,
       "createdAt": "24.01.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -160,13 +152,11 @@
       "id": "5",
       "title": "Golang news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://cdn-front.kwork.ru/pics/t3/88/16350941-1630390388.jpg",
+      "img": "https://itgap.ru/static/uploads/posts/2022/01/05/c2481e98da9b9e2efe8df2e6c1a93ede.jpg",
       "views": 10222,
       "createdAt": "26.02.2020",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -188,9 +178,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -212,9 +200,7 @@
       "views": 100,
       "createdAt": "21.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -232,13 +218,11 @@
       "id": "8",
       "title": "TypeScript news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1400/1*aTCN2ctKNoZupUCMP0hQuw.png",
+      "img": "https://i.ytimg.com/vi/ztk9WZClmLQ/maxresdefault.jpg",
       "views": 102222,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -256,13 +240,11 @@
       "id": "9",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://pluspng.com/img-png/kotlin-logo-png-kotlin-collection-function-techshots-medium-1200x630.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -280,13 +262,11 @@
       "id": "10",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://www.goubuntu.ru/wp-content/uploads/2019/03/python.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -304,13 +284,11 @@
       "id": "11",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://pluspng.com/img-png/kotlin-logo-png-kotlin-collection-function-techshots-medium-1200x630.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -328,13 +306,11 @@
       "id": "12",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://www.goubuntu.ru/wp-content/uploads/2019/03/python.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -352,13 +328,11 @@
       "id": "13",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://pluspng.com/img-png/kotlin-logo-png-kotlin-collection-function-techshots-medium-1200x630.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -376,13 +350,11 @@
       "id": "14",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://www.goubuntu.ru/wp-content/uploads/2019/03/python.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -400,13 +372,11 @@
       "id": "15",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://pluspng.com/img-png/kotlin-logo-png-kotlin-collection-function-techshots-medium-1200x630.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -424,13 +394,11 @@
       "id": "16",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://www.goubuntu.ru/wp-content/uploads/2019/03/python.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -448,13 +416,11 @@
       "id": "17",
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://pluspng.com/img-png/kotlin-logo-png-kotlin-collection-function-techshots-medium-1200x630.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -476,9 +442,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
+      "type": ["ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -500,9 +464,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
