@@ -72,6 +72,8 @@ module.exports = {
           'justify',
           'align',
           'gap',
+          'titleTag',
+          'role',
         ],
         markupOnly: true,
       },

@@ -1,4 +1,5 @@
-import { ReactNode } from 'react'
+/* eslint-disable @typescript-eslint/indent */
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
 import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Flex.module.scss'
 
@@ -6,6 +7,7 @@ export type FlexJustify = 'start' | 'center' | 'end' | 'between'
 export type FlexAlign = 'start' | 'center' | 'end'
 export type FlexDirection = 'row' | 'column'
 export type FlexGap = '4' | '8' | '16' | '32'
+export type FlexWrap = 'nowrap' | 'wrap' | 'wrap-reverse'
 
 const justifyClasses: Record<FlexJustify, string> = {
   start: cls.justifyStart,
@@ -32,12 +34,18 @@ const gapClasses: Record<FlexGap, string> = {
   32: cls.gap32,
 }
 
-export interface FlexProps {
+type DivProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>
+
+export interface FlexProps extends DivProps {
   className?: string
   children: ReactNode
   justify?: FlexJustify
   align?: FlexAlign
   direction: FlexDirection
+  wrap?: FlexWrap
   gap?: FlexGap
   max?: boolean
 }
@@ -49,6 +57,7 @@ export const Flex = (props: FlexProps) => {
     justify = 'start',
     align = 'center',
     direction = 'row',
+    wrap,
     gap,
     max,
   } = props
@@ -63,6 +72,7 @@ export const Flex = (props: FlexProps) => {
 
   const mods: Mods = {
     [cls.max]: max,
+    [cls.wrap]: wrap,
   }
 
   return <div className={classNames(cls.flex, mods, classes)}>{children}</div>
