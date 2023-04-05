@@ -74,6 +74,8 @@ module.exports = {
           'gap',
           'titleTag',
           'role',
+          'as',
+          'refName',
         ],
         markupOnly: true,
       },
