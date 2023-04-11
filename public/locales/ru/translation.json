@@ -48,5 +48,6 @@
   "creating-a-new-article": "Создание новой статьи",
   "editing-an-article-with-id": "Редактирование статьи с ID =",
   "info-app": "Info App",
-  "create-article": "Создать статью"
+  "create-article": "Создать статью",
+  "error-when-downloading-articles": "Ошибка при загрузке статей"
 }

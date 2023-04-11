@@ -1,7 +1,5 @@
-import { ArticleList } from 'entities/Article'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
@@ -11,17 +9,10 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Page } from 'widgets/Page/Page'
-import {
-  getArticlesPageError,
-  getArticlesPageIsLoading,
-  getArticlesPageView,
-} from '../../model/selectors/articlesPageSelectors'
 import { fetchNextArticlesPage } from '../../model/services/fetcNextArticlesPage/fetchNextArticlesPage'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
-import {
-  articlesPageReducer,
-  getArticles,
-} from '../../model/slices/articlePageSlice'
+import { articlesPageReducer } from '../../model/slices/articlePageSlice'
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList'
 import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters'
 import cls from './ArticlesPage.module.scss'
 
@@ -37,16 +28,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const { className } = props
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const articles = useSelector(getArticles.selectAll)
-  const isLoading = useSelector(getArticlesPageIsLoading)
-  const view = useSelector(getArticlesPageView)
-  const error = useSelector(getArticlesPageError)
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
 
   const onLoadNextPart = useCallback(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchNextArticlesPage())
-    }
+    dispatch(fetchNextArticlesPage())
   }, [dispatch])
 
   useInitialEffect(() => {
@@ -60,12 +45,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         className={classNames(cls.ArticlesPage, {}, [className])}
       >
         <ArticlePageFilters />
-        <ArticleList
-          isLoading={isLoading}
-          view={view}
-          articles={articles}
-          className={cls.list}
-        />
+        <ArticleInfiniteList className={cls.list} />
       </Page>
     </DynamicModuleLoader>
   )

@@ -74,10 +74,7 @@ export const ArticleList = (props: ArticleListProps) => {
   }
 
   return (
-    <WindowScroller
-      onScroll={() => console.log('scroll')}
-      scrollElement={document.getElementById(PAGE_ID) as Element}
-    >
+    <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
       {({
         height,
         width,

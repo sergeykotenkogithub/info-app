@@ -17,5 +17,7 @@
   "name-and-surname-are-required": "Имя и фамилия обязательны",
   "data-is-not-indicated": "Данные не указаны",
   "incorrect-region": "Неверный регион",
-  "server-error-while-maintaining": "Ошибка сервера при обслуживании"
+  "server-error-while-maintaining": "Ошибка сервера при обслуживании",
+  "the-profile-was-not-found": "Профиль не найден",
+  "not-found-profile": "Не найден профиль"
 }

@@ -48,5 +48,6 @@
   "creating-a-new-article": "Creating a new article",
   "editing-an-article-with-id": "Editing an article with ID =",
   "info-app": "Info App",
-  "create-article": "Create article"
+  "create-article": "Create article",
+  "error-when-downloading-articles": "Error when downloading articles"
 }

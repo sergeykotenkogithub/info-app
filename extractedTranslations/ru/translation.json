@@ -25,6 +25,7 @@
   "enter-password": "enter-password",
   "enter-the-text-of-the-comment": "enter-the-text-of-the-comment",
   "enter-username": "enter-username",
+  "error-when-downloading-articles": "error-when-downloading-articles",
   "go-out": "go-out",
   "home": "home",
   "incorrect-age": "incorrect-age",
@@ -38,6 +39,7 @@
   "lorem": "lorem",
   "name": "name",
   "name-and-surname-are-required": "name-and-surname-are-required",
+  "not-found-profile": "not-found-profile",
   "on": "on",
   "page-not-found": "page-not-found",
   "profile": "profile",
@@ -69,6 +71,12 @@
   "Введите имя пользователя": "Введите имя пользователя",
   "Введите ссылку на аватар": "Введите ссылку на аватар",
   "Город": "Город",
+  "Комментарии": "Комментарии",
+  "Отменить": "Отменить",
   "Попробуйте обновить страницу": "Попробуйте обновить страницу",
-  "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля"
+  "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
+  "Профиль": "Профиль",
+  "Редактировать": "Редактировать",
+  "Рекомендуем": "Рекомендуем",
+  "Сохранить": "Сохранить"
 }

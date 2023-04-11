@@ -17,5 +17,7 @@
   "name-and-surname-are-required": "Name and surname are required",
   "data-is-not-indicated": "Data is not indicated",
   "incorrect-region": "Incorrect region",
-  "server-error-while-maintaining": "Server error while maintaining"
+  "server-error-while-maintaining": "Server error while maintaining",
+  "the-profile-was-not-found": "The profile was not found",
+  "not-found-profile": "Not found profile"
 }
