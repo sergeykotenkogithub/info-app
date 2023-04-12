@@ -49,5 +49,7 @@
   "editing-an-article-with-id": "Редактирование статьи с ID =",
   "info-app": "Info App",
   "create-article": "Создать статью",
-  "error-when-downloading-articles": "Ошибка при загрузке статей"
+  "error-when-downloading-articles": "Ошибка при загрузке статей",
+  "admin-panel": "Админка",
+  "you-have-no-access-to-this-page": "У вас нет доступа к этой странице"
 }
