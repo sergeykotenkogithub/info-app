@@ -1,0 +1,21 @@
+{
+  "city": "city",
+  "data-is-not-indicated": "data-is-not-indicated",
+  "enter-link-on-avatar": "enter-link-on-avatar",
+  "enter-name-user": "enter-name-user",
+  "incorrect-age": "incorrect-age",
+  "incorrect-region": "incorrect-region",
+  "indicate-the-country": "indicate-the-country",
+  "indicate-the-currency": "indicate-the-currency",
+  "name-and-surname-are-required": "name-and-surname-are-required",
+  "server-error-while-maintaining": "server-error-while-maintaining",
+  "there-was-an-error": "there-was-an-error",
+  "try-to-update-the-page": "try-to-update-the-page",
+  "your-age": "your-age",
+  "your-name": "your-name",
+  "your-surname": "your-surname",
+  "Отменить": "Отменить",
+  "Профиль": "Профиль",
+  "Редактировать": "Редактировать",
+  "Сохранить": "Сохранить"
+}
