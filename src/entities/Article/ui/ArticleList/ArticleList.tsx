@@ -76,6 +76,7 @@ export const ArticleList = (props: ArticleListProps) => {
   }
 
   return (
+    // @ts-ignore
     <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
       {({
         height,
@@ -87,9 +88,11 @@ export const ArticleList = (props: ArticleListProps) => {
       }) => (
         <div
           className={classNames(cls.articleList, {}, [className, cls[view]])}
+          // @ts-ignore
           ref={registerChild}
         >
           {virtualized ? (
+            // @ts-ignore
             <List
               height={height ?? 700}
               rowCount={rowCount}

@@ -29,21 +29,15 @@ export const EditableProfileCardHeader = memo(
     const dispatch = useAppDispatch()
 
     const onEdit = useCallback(() => {
-      if (__PROJECT__ !== 'storybook') {
-        dispatch(profileActions.setReadonly(false))
-      }
+      dispatch(profileActions.setReadonly(false))
     }, [dispatch])
 
     const onCancelEdit = useCallback(() => {
-      if (__PROJECT__ !== 'storybook') {
-        dispatch(profileActions.cancelEdit())
-      }
+      dispatch(profileActions.cancelEdit())
     }, [dispatch])
 
     const onSave = useCallback(() => {
-      if (__PROJECT__ !== 'storybook') {
-        dispatch(updateProfileData())
-      }
+      dispatch(updateProfileData())
     }, [dispatch])
 
     return (

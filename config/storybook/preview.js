@@ -4,6 +4,7 @@ import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorat
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator'
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 // import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator/TranslationDecorator'
+import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -19,3 +20,4 @@ addDecorator(StyleDecorator)
 // addDecorator(TranslationDecorator)
 addDecorator(ThemeDecorator(Theme.LIGHT))
 addDecorator(RouterDecorator)
+addDecorator(SuspenseDecorator)

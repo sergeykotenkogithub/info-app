@@ -6,7 +6,7 @@ export function useThrottle<T>(
 ) {
   const throttleRef = useRef(false)
   return useCallback(
-    (...args) => {
+    (...args: T[]) => {
       if (!throttleRef.current) {
         callback(...args)
         throttleRef.current = true
