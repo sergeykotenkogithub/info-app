@@ -1,9 +1,10 @@
+export type { Article } from './model/types/article'
+
 export {
-  Article,
   ArticleSortField,
   ArticleType,
   ArticleView,
-} from './model/types/article'
+} from './model/consts/articleConsts'
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema'
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
 
