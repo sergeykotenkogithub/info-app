@@ -1,4 +1,5 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import CirculeDependencyPlugin from 'circular-dependency-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -28,6 +29,10 @@ export function buildPlugins({
     }),
     new CopyPlugin({
       patterns: [{ from: paths.locales, to: paths.buildLocales }],
+    }),
+    new CirculeDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true,
     }),
   ]
 
