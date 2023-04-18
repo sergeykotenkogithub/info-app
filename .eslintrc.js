@@ -76,6 +76,7 @@ module.exports = {
           'role',
           'as',
           'refName',
+          'border',
         ],
         markupOnly: true,
       },
