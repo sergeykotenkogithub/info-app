@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { NotificationList } from './NotificationList'
 
@@ -10,7 +10,9 @@ export default {
   },
 } as ComponentMeta<typeof NotificationList>
 
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+  <NotificationList {...args} />
+)
 
 export const Normal = Template.bind({})
 Normal.args = {}
