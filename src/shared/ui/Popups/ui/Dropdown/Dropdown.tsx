@@ -1,7 +1,7 @@
-import { Menu } from '@headlessui/react'
-import { Fragment, ReactNode } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DropdownDirection } from '@/shared/types/ui'
+import { Menu } from '@headlessui/react'
+import { Fragment, ReactNode } from 'react'
 import { AppLink } from '../../../AppLink/AppLink'
 import { mapDirectionClass } from '../../styles/consts'
 import popupCls from '../../styles/popup.module.scss'
@@ -52,7 +52,7 @@ export const Dropdown = (props: DropdownProps) => {
                 to={item.href}
                 disabled={item.disabled}
                 refName="href"
-                key={index}
+                key={`dropdown-key-${index}`}
               >
                 {content}
               </Menu.Item>
@@ -60,7 +60,11 @@ export const Dropdown = (props: DropdownProps) => {
           }
 
           return (
-            <Menu.Item as={Fragment} disabled={item.disabled} key={index}>
+            <Menu.Item
+              as={Fragment}
+              disabled={item.disabled}
+              key={`dropdown-key-${index}`}
+            >
               {content}
             </Menu.Item>
           )

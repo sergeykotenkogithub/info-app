@@ -52,5 +52,7 @@
   "error-when-downloading-articles": "Ошибка при загрузке статей",
   "admin-panel": "Админка",
   "you-have-no-access-to-this-page": "У вас нет доступа к этой странице",
-  "comments": "Комментарии"
+  "comments": "Комментарии",
+  "your-feedback": "Ваш отзыв",
+  "close": "Закрывать"
 }

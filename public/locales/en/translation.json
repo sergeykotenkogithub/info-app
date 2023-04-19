@@ -52,5 +52,7 @@
   "error-when-downloading-articles": "Error when downloading articles",
   "admin-panel": "admin panel",
   "you-have-no-access-to-this-page": "You have no access to this page",
-  "comments": "Comments"
+  "comments": "Comments",
+  "your-feedback": "Your feedback",
+  "close": "Close"
 }
