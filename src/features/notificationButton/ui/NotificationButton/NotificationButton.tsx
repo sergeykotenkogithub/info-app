@@ -1,12 +1,11 @@
 import { NotificationList } from '@/entities/Notification'
-import { useCallback, useState } from 'react'
 import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider'
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice'
 import { Drawer } from '@/shared/ui/Drawer/Drawer'
 import { Icon } from '@/shared/ui/Icon/Icon'
 import { Popover } from '@/shared/ui/Popups'
+import { useCallback, useState } from 'react'
 import cls from './NotificationButton.module.scss'
 
 interface NotificationButtonProps {
@@ -38,11 +37,9 @@ export const NotificationButton = (props: NotificationButtonProps) => {
       {isMobile ? (
         <>
           {trigger}
-          <AnimationProvider>
-            <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-              <NotificationList />
-            </Drawer>
-          </AnimationProvider>
+          <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+            <NotificationList />
+          </Drawer>
         </>
       ) : (
         <Popover
