@@ -13,3 +13,4 @@ storybook
 scripts
 json-server
 .husky
+vite.config.ts
