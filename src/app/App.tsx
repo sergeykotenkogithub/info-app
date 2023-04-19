@@ -1,10 +1,11 @@
+/* eslint-disable import/order */
 import { FC, Suspense, useEffect } from 'react'
 
-import { getUserInited, userActions } from 'entities/User'
+import { getUserInited, userActions } from '@/entities/User'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Navbar } from '@/widgets/Navbar'
+import { Sidebar } from '@/widgets/Sidebar'
 import { useDispatch, useSelector } from 'react-redux'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Navbar } from 'widgets/Navbar'
-import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from './providers/router'
 
 const App: FC = () => {

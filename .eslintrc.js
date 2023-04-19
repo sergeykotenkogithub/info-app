@@ -100,6 +100,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
     'sergey-kotenko-plugin/path-checker': 'error',
+    'import/order': 'off',
   },
   globals: {
     __IS_DEV__: true,

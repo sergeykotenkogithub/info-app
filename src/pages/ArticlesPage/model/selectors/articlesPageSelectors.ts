@@ -1,6 +1,6 @@
 /* eslint-disable implicit-arrow-linebreak */
-import { StateSchema } from 'app/providers/StoreProvider'
-import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
+import { StateSchema } from '@/app/providers/StoreProvider'
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article'
 
 export const getArticlesPageIsLoading = (state: StateSchema) =>
   state.articlesPage?.isLoading

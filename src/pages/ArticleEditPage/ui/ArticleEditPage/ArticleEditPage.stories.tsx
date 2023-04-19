@@ -2,9 +2,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import {
   ArticleBlockType,
   ArticleType,
-} from 'entities/Article/model/consts/articleConsts'
-import { Article } from 'entities/Article/model/types/article'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+} from '@/entities/Article/model/consts/articleConsts'
+import { Article } from '@/entities/Article/model/types/article'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import ArticleEditPage from './ArticleEditPage'
 
 export default {

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { ThunkConfig } from 'app/providers/StoreProvider'
-import { Comment } from 'entities/Comment'
+import { ThunkConfig } from '@/app/providers/StoreProvider'
+import { Comment } from '@/entities/Comment'
 
 export const fetchCommentByArticleId = createAsyncThunk<
   Comment[],
