@@ -707,5 +707,57 @@
       "username": "admin",
       "avatar": "https://xakep.ru/wp-content/uploads/2015/08/41885761_xl.jpg"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "id": "oaFYWjU"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 5,
+      "feedback": "sadsadasd",
+      "id": "_hA0FZB"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "так себе",
+      "id": "T775Kix"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
+    }
   ]
 }

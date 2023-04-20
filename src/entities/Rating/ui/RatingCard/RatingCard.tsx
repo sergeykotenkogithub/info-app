@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice'
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
 import { Card } from '@/shared/ui/Card/Card'
@@ -11,7 +10,6 @@ import { StarRating } from '@/shared/ui/StarRating/StarRating'
 import { Text } from '@/shared/ui/Text/Text'
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import cls from './RatingCard.module.scss'
 
 interface RatingCardProps {
   className?: string
@@ -20,14 +18,22 @@ interface RatingCardProps {
   hasFeedback?: boolean
   onCancel?: (starsCount: number) => void
   onAccept?: (starsCount: number, feedback?: string) => void
+  rate?: number
 }
 
 export const RatingCard = (props: RatingCardProps) => {
-  const { className, feedbackTitle, hasFeedback, onAccept, onCancel, title } =
-    props
+  const {
+    className,
+    feedbackTitle,
+    hasFeedback,
+    onAccept,
+    onCancel,
+    title,
+    rate = 0,
+  } = props
   const { t } = useTranslation()
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [starsCount, setStarsCount] = useState(0)
+  const [starsCount, setStarsCount] = useState(rate)
   const [feedback, setFeedback] = useState('')
 
   const onSelectStars = useCallback(
@@ -66,10 +72,14 @@ export const RatingCard = (props: RatingCardProps) => {
   )
 
   return (
-    <Card className={classNames(cls.ratingCard, {}, [className])}>
-      <VStack align="center" gap="8">
-        <Text title={title} />
-        <StarRating size={40} onSelect={onSelectStars} />
+    <Card className={className} max>
+      <VStack align="center" gap="8" max>
+        <Text title={starsCount ? t('thank-you-for-the-assessment') : title} />
+        <StarRating
+          selectedStars={starsCount}
+          size={40}
+          onSelect={onSelectStars}
+        />
       </VStack>
 
       {isMobile ? (
