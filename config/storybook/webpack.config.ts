@@ -16,6 +16,11 @@ export default ({ config }: { config: webpack.Configuration }) => {
   }
   config.resolve!.modules = [paths.src, 'node_modules']
   config.resolve!.extensions!.push('.ts', '.tsx')
+  //  config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') }
+  config!.resolve!.alias = {
+    ...config!.resolve!.alias,
+    '@': paths.src,
+  }
   // @ts-ignore
   config!.module!.rules = config!.module!.rules!.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
@@ -38,7 +43,6 @@ export default ({ config }: { config: webpack.Configuration }) => {
       __PROJECT__: JSON.stringify('storybook'),
     })
   )
-  config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') }
 
   return config
 }
