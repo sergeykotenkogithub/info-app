@@ -1,6 +1,3 @@
-import { useCallback } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
@@ -9,6 +6,9 @@ import {
 import { Button } from '@/shared/ui/Button/Button'
 import { Input } from '@/shared/ui/Input/Input'
 import { HStack } from '@/shared/ui/Stack'
+import { useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   getAddCommentFormError,
   getAddCommentFormText,
@@ -17,6 +17,7 @@ import {
   addCommentFormActions,
   addCommentFormReducer,
 } from '../../model/slices/addCommentFormSlice'
+
 import cls from './AddCommentForm.module.scss'
 
 export interface AddCommentFormProps {

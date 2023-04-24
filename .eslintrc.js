@@ -99,7 +99,7 @@ module.exports = {
     //new
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
-    'sergey-kotenko-plugin/path-checker': 'error',
+    'sergey-kotenko-plugin/path-checker': ['error', { alias: '@' }],
     'import/order': 'off',
   },
   globals: {
