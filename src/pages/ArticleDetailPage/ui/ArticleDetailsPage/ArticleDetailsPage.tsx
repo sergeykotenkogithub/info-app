@@ -9,7 +9,7 @@ import {
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { VStack } from '@/shared/ui/Stack'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 import { memo } from 'react'
 import { useParams } from 'react-router-dom'
 import { articleDetailsPageReducer } from '../../model/slice'

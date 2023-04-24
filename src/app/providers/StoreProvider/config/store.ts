@@ -1,10 +1,10 @@
-import { ReducersMapObject, configureStore } from '@reduxjs/toolkit'
 import { counterReducer } from '@/entities/Counter'
 import { userReducer } from '@/entities/User'
-import { scrollSaveReducer } from '@/features/ui/ScrollSave'
-import { CombinedState, Reducer } from 'redux'
+import { scrollSaveReducer } from '@/features/ScrollSave'
 import { $api } from '@/shared/api/api'
 import { rtkApi } from '@/shared/api/rtkApi'
+import { ReducersMapObject, configureStore } from '@reduxjs/toolkit'
+import { CombinedState, Reducer } from 'redux'
 import { StateSchema, ThunkExtraArg } from './StateSchema'
 import { createReducerManager } from './reducerManager'
 

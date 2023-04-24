@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/indent */
-import { createAsyncThunk } from '@reduxjs/toolkit'
 import { ThunkConfig } from '@/app/providers/StoreProvider'
-import { getArticleDetailsData } from '@/entities/Article/model/selectors/articleDetails'
+import { getArticleDetailsData } from '@/entities/Article'
 import { getUserAuthData } from '@/entities/User'
+import { createAsyncThunk } from '@reduxjs/toolkit'
 import { fetchCommentByArticleId } from '../fetchCommentByArticleId/fetchCommentByArticleId'
 
 export const addCommentForArticle = createAsyncThunk<

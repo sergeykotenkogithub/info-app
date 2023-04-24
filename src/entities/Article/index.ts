@@ -1,6 +1,7 @@
 export type { Article } from './model/types/article'
 
 export {
+  ArticleBlockType,
   ArticleSortField,
   ArticleType,
   ArticleView,

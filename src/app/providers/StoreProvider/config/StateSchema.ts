@@ -1,3 +1,13 @@
+import { ArticleDetailsSchema } from '@/entities/Article'
+import { CounterSchema } from '@/entities/Counter'
+import { UserSchema } from '@/entities/User'
+import { LoginSchema } from '@/features/AuthByUsername'
+import { ScrollSaveSchema } from '@/features/ScrollSave'
+import { AddCommentFormSchema } from '@/features/addCommentForm'
+import { ProfileSchema } from '@/features/editableProfileCard'
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailPage'
+import { ArticlesPageSchema } from '@/pages/ArticlesPage'
+import { rtkApi } from '@/shared/api/rtkApi'
 import {
   AnyAction,
   CombinedState,
@@ -6,16 +16,6 @@ import {
   ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { AxiosInstance } from 'axios'
-import { ArticleDetailsSchema } from '@/entities/Article'
-import { CounterSchema } from '@/entities/Counter'
-import { UserSchema } from '@/entities/User'
-import { LoginSchema } from '@/features/AuthByUsername'
-import { AddCommentFormSchema } from '@/features/addCommentForm'
-import { ProfileSchema } from '@/features/editableProfileCard'
-import { ScrollSaveSchema } from '@/features/ui/ScrollSave'
-import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailPage'
-import { ArticlesPageSchema } from '@/pages/ArticlesPage'
-import { rtkApi } from '@/shared/api/rtkApi'
 
 export interface StateSchema {
   counter: CounterSchema
