@@ -100,6 +100,13 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
     'sergey-kotenko-plugin/path-checker': ['error', { alias: '@' }],
+    'sergey-kotenko-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
     'sergey-kotenko-plugin/public-api-imports': [
       'error',
       {
