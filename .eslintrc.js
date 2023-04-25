@@ -23,10 +23,12 @@ module.exports = {
     'i18next',
     'react-hooks',
     'sergey-kotenko-plugin',
+    'unused-imports',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
+    'unused-imports/no-unused-imports': 'error',
     indent: [2, 2],
     semi: 'off', // точка с запятой
     '@typescript-eslint/semi': 'off', // точка с запятой
