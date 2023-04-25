@@ -3,7 +3,7 @@ import { ThemeSwitcher } from '@/features/ThemeSwitcher'
 import { FC, memo, useMemo, useState } from 'react'
 
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button'
 import { VStack } from '@/shared/ui/Stack'
 import { useSelector } from 'react-redux'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'

@@ -3,8 +3,8 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { Button } from '@/shared/ui/Button/Button'
-import { Input } from '@/shared/ui/Input/Input'
+import { Button } from '@/shared/ui/Button'
+import { Input } from '@/shared/ui/Input'
 import { HStack } from '@/shared/ui/Stack'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'

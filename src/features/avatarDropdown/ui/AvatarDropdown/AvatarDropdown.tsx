@@ -8,7 +8,7 @@ import {
 } from '@/entities/User'
 import { RouterPath } from '@/shared/const/route'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
