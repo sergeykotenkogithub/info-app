@@ -20,7 +20,14 @@ const isAbsolute = (value: string) => {
 componentsDirs?.forEach((directory) => {
   const indexFilePath = `${directory.getPath()}/index.ts`
   const indexFile = directory.getSourceFile(indexFilePath)
-  console.log(indexFile?.getBaseName())
+
+  if (!indexFile) {
+    const sourceCode = `export * from './${directory.getBaseName()}'`
+    const file = directory.createSourceFile(indexFilePath, sourceCode, {
+      overwrite: true,
+    })
+    file.save()
+  }
 })
 
 // files.forEach((sourceFile) => {
