@@ -1,4 +1,4 @@
-import { RouterPath } from '@/shared/config/routeConfig/routeConfig'
+import { RouterPath } from '@/shared/const/route'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'
