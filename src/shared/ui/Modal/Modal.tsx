@@ -16,7 +16,7 @@ interface ModalProps {
 
 export const Modal: FC<ModalProps> = (props) => {
   const { className, children, isOpen, onClose, lazy } = props
-  const { close, isClosing, isMounted } = useModal({
+  const { close, isClosing, isMounted, isRenderModal } = useModal({
     animationDelay: 300,
     onClose,
     isOpen,
@@ -25,7 +25,7 @@ export const Modal: FC<ModalProps> = (props) => {
   const { theme } = useTheme()
 
   const mods: Mods = {
-    [cls.opened]: isOpen,
+    [cls.opened]: isRenderModal,
     [cls.isClosing]: isClosing,
   }
 
