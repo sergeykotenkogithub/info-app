@@ -1,5 +1,5 @@
 import { getArticleDetailsData } from '@/entities/Article'
-import { RouterPath } from '@/shared/const/route'
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button } from '@/shared/ui/Button'
 import { HStack } from '@/shared/ui/Stack'
@@ -23,12 +23,14 @@ export const ArticleDetailsPageHeader = (
   const canEdit = useSelector(getCanEditArticle)
 
   const onBackToList = useCallback(() => {
-    navigate(RouterPath.articles)
+    navigate(getRouteArticles())
   }, [navigate])
 
   const onEditArticle = useCallback(() => {
-    navigate(`${RouterPath.article_details}${article?.id}/edit`)
-  }, [article?.id, navigate])
+    if (article) {
+      navigate(getRouteArticleEdit(article.id))
+    }
+  }, [article, navigate])
 
   return (
     <HStack max justify="between" className={classNames('', {}, [className])}>

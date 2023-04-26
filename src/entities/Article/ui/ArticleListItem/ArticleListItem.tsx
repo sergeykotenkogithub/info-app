@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
-import { RouterPath } from '@/shared/const/route'
+import { getRouteArticleDetails } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
@@ -58,10 +58,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
             />
           )}
           <div className={cls.footer}>
-            <AppLink
-              to={RouterPath.article_details + article.id}
-              target={target}
-            >
+            <AppLink to={getRouteArticleDetails(article.id)} target={target}>
               <Button>{t('read-more')}</Button>
             </AppLink>
             {views}
@@ -74,7 +71,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   return (
     <AppLink
       target={target}
-      to={RouterPath.article_details + article.id}
+      to={getRouteArticleDetails(article.id)}
       className={classNames(cls.articleListItem, {}, [className, cls[view]])}
     >
       <Card>
