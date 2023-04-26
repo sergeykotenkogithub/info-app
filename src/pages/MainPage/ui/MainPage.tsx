@@ -1,3 +1,4 @@
+import { Counter } from '@/entities/Counter'
 import { Page } from '@/widgets/Page'
 import { FC, memo } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -5,7 +6,12 @@ import { useTranslation } from 'react-i18next'
 const MainPage: FC = memo(() => {
   const { t } = useTranslation()
 
-  return <Page>{t('the-main-page')}</Page>
+  return (
+    <Page>
+      <Counter />
+      {t('the-main-page')}
+    </Page>
+  )
 })
 
 export default MainPage
