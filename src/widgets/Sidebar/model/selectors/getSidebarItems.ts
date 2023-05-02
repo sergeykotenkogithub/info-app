@@ -17,7 +17,7 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
     {
       path: getRouteMain(),
       Icon: MainIcon,
-      text: 'Главная',
+      text: 'the-main-page',
     },
     {
       path: getRouteAbout(),

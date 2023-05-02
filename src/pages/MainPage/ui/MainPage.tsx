@@ -7,7 +7,7 @@ const MainPage: FC = memo(() => {
   const { t } = useTranslation()
 
   return (
-    <Page>
+    <Page data-testid="MainPage">
       <Counter />
       {t('the-main-page')}
     </Page>

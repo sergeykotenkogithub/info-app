@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 const AdminPanelPage: FC = memo(() => {
   const { t } = useTranslation()
-  return <Page>{t('admin-panel')}</Page>
+  return <Page data-testid="AdminPanelPage">{t('admin-panel')}</Page>
 })
 
 export default AdminPanelPage

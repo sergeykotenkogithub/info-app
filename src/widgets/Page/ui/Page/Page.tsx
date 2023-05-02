@@ -7,12 +7,13 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
+import { TestProps } from '@/shared/types/test'
 import { MutableRefObject, ReactNode, UIEvent, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import cls from './Page.module.scss'
 
-interface PageProps {
+interface PageProps extends TestProps {
   className?: string
   children: ReactNode
   onScrollEnd?: () => void
@@ -55,6 +56,8 @@ export const Page = (props: PageProps) => {
       className={classNames(cls.page, {}, [className])}
       onScroll={onScroll}
       id={PAGE_ID}
+      // eslint-disable-next-line react/destructuring-assignment
+      data-testid={props['data-testid'] ?? 'Page'}
     >
       {children}
       {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
