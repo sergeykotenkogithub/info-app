@@ -6,7 +6,7 @@ import { BuildOptions } from './types/config'
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options
   const svgLoader = {
-    test: /\.svg$/
+    test: /\.svg$/,
     use: ['@svgr/webpack'],
   }
 
