@@ -8,6 +8,7 @@ const AboutPage = () => {
     <Page data-testid="AboutPage">
       {t('about-the-site')}
       <div />
+      <div />
     </Page>
   )
 }
