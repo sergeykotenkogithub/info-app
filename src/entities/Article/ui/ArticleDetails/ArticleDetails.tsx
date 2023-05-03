@@ -1,7 +1,4 @@
 /* eslint-disable indent */
-import { memo, useCallback, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
@@ -15,6 +12,9 @@ import { Icon } from '@/shared/ui/Icon'
 import { Skeleton } from '@/shared/ui/Skeleton'
 import { HStack, VStack } from '@/shared/ui/Stack'
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text'
+import { memo, useCallback, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { ArticleBlockType } from '../../model/consts/articleConsts'
 import {
   getArticleDetailsData,
@@ -23,6 +23,7 @@ import {
 } from '../../model/selectors/articleDetails'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
+// import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { ArticleBlock } from '../../model/types/article'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
