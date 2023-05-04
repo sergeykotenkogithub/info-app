@@ -13,3 +13,5 @@ scripts
 json-server
 .husky
 vite.config.ts
+react-app-env.d.ts
+cypress
