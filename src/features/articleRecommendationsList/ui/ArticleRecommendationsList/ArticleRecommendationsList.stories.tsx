@@ -2,7 +2,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Article } from '@/entities/Article'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-import withMock from 'storybook-addon-mock'
 import { ArticleRecommendationsList } from './ArticleRecommendationsList'
 
 export default {
@@ -11,7 +10,6 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-  decorators: [withMock],
 } as ComponentMeta<typeof ArticleRecommendationsList>
 
 const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
