@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
 import { Mods, classNames } from '@/shared/lib/classNames/classNames'
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
 import cls from './Flex.module.scss'
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between'
@@ -60,6 +60,7 @@ export const Flex = (props: FlexProps) => {
     wrap,
     gap,
     max,
+    ...otherProps
   } = props
 
   const classes = [
@@ -75,5 +76,9 @@ export const Flex = (props: FlexProps) => {
     [cls.wrap]: wrap,
   }
 
-  return <div className={classNames(cls.flex, mods, classes)}>{children}</div>
+  return (
+    <div className={classNames(cls.flex, mods, classes)} {...otherProps}>
+      {children}
+    </div>
+  )
 }

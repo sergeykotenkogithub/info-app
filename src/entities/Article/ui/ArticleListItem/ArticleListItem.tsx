@@ -43,6 +43,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
     return (
       <div
         className={classNames(cls.articleListItem, {}, [className, cls[view]])}
+        data-testid="ArticleListItem"
       >
         <Card>
           <div className={cls.header}>
@@ -80,6 +81,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
       target={target}
       to={getRouteArticleDetails(article.id)}
       className={classNames(cls.articleListItem, {}, [className, cls[view]])}
+      data-testid="ArticleListItem"
     >
       <Card>
         <div className={cls.imageWrapper}>

@@ -64,6 +64,7 @@ export const RatingCard = (props: RatingCardProps) => {
     <>
       <Text title={feedbackTitle} />
       <Input
+        data-testid="RatingCard.Input"
         value={feedback}
         onChange={setFeedback}
         placeholder={t('your-feedback')}
@@ -72,7 +73,7 @@ export const RatingCard = (props: RatingCardProps) => {
   )
 
   return (
-    <Card className={className} max>
+    <Card className={className} max data-testid="RatingCard">
       <VStack align="center" gap="8" max>
         <Text title={starsCount ? t('thank-you-for-the-assessment') : title} />
         <StarRating
@@ -86,6 +87,7 @@ export const RatingCard = (props: RatingCardProps) => {
         <Drawer isOpen={isModalOpen} lazy onClose={cancelHandler}>
           <VStack gap="32">
             {modalContent}
+
             <Button onClick={cancelHandler} size={ButtonSize.L} fullWidth>
               {t('send')}
             </Button>
@@ -96,10 +98,16 @@ export const RatingCard = (props: RatingCardProps) => {
           <VStack max gap="32">
             {modalContent}
             <HStack max gap="16" justify="end">
-              <Button onClick={cancelHandler} theme={ButtonTheme.OUTLINE_RED}>
+              <Button
+                onClick={cancelHandler}
+                theme={ButtonTheme.OUTLINE_RED}
+                data-testid="RatingCard.Close"
+              >
                 {t('close')}
               </Button>
-              <Button onClick={acceptHandler}>{t('send')} </Button>
+              <Button data-testid="RatingCard.Send" onClick={acceptHandler}>
+                {t('send')}{' '}
+              </Button>
             </HStack>
           </VStack>
         </Modal>
