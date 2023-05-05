@@ -10,6 +10,7 @@ module.exports = {
     'airbnb-typescript',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'prettier',
   ],
   overrides: [],
   parserOptions: {
@@ -28,10 +29,10 @@ module.exports = {
     'unused-imports',
   ],
   rules: {
-    'react/jsx-indent': [2, 2],
-    'react/jsx-indent-props': [2, 2],
+    // 'react/jsx-indent': [2, 2],
+    // 'react/jsx-indent-props': [2, 2],
     'unused-imports/no-unused-imports': 'error',
-    indent: [2, 2],
+    // indent: [2, 2],
     semi: 'off', // точка с запятой
     '@typescript-eslint/semi': 'off', // точка с запятой
     'react/function-component-definition': [

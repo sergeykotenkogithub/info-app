@@ -106,7 +106,7 @@ export const RatingCard = (props: RatingCardProps) => {
                 {t('close')}
               </Button>
               <Button data-testid="RatingCard.Send" onClick={acceptHandler}>
-                {t('send')}{' '}
+                {t('send')}
               </Button>
             </HStack>
           </VStack>

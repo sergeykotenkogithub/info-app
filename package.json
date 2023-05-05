@@ -12,6 +12,7 @@
     "build:prod": "webpack --env mode=production apiUrl=https://production-project-server-nu.vercel.app",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "prettier": "npx prettier --write **/*.{ts,tsx,json}",
     "lint:ts:fix": "npx eslint \"**/*.{ts, tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
@@ -30,7 +31,10 @@
     "postinstall": "node ./scripts/clear-cache.js"
   },
   "lint-staged": {
-    "**/*.{ts, tsx}": "eslint"
+    "**/*.{ts, tsx}": [
+      "prettier --list-different",
+      "eslint"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -76,6 +80,7 @@
     "eslint": "^8.33.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-i18next": "^5.1.2",
     "eslint-plugin-import": "^2.27.5",
@@ -99,6 +104,7 @@
     "lint-staged": "^13.2.2",
     "loki": "^0.31.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "prettier": "2.8.8",
     "react-refresh": "^0.12.0",
     "reg-cli": "^0.17.6",
     "regenerator-runtime": "^0.13.9",

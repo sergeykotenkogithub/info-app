@@ -15,3 +15,5 @@ json-server
 vite.config.ts
 react-app-env.d.ts
 cypress
+cypress.config.ts
+componentRender.tsx
