@@ -4,15 +4,17 @@ import { ArticleDetails } from '@/entities/Article'
 import { Counter } from '@/entities/Counter'
 import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
-import { getFeaturesFlags } from '@/shared/features'
+import { getFeatureFlag, toggleFeatures } from '@/shared/features'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { Card } from '@/shared/ui/Card'
 import { VStack } from '@/shared/ui/Stack'
 import { Page } from '@/widgets/Page'
 import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { articleDetailsPageReducer } from '../../model/slice'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
@@ -30,12 +32,25 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
   const { className } = props
   const { id } = useParams<{ id: string }>()
-  const isArticleRatingEnabled = getFeaturesFlags('isArticleRatingEnabled')
-  const isCounterEnabled = getFeaturesFlags('isCounterEnabled')
+  const { t } = useTranslation()
+  const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
+  // const isCounterEnabled = getFeaturesFlags('isCounterEnabled')
 
   if (!id) {
     return null
   }
+
+  const counter = toggleFeatures({
+    name: 'isCounterEnabled',
+    on: () => <div>11111</div>,
+    off: () => <Counter />,
+  })
+
+  const articleRatingCard = toggleFeatures({
+    name: 'isArticleRatingEnabled',
+    on: () => <ArticleRating articleId={id} />,
+    off: () => <Card>{t('evaluation-of-articles-will-appear-soon')}</Card>,
+  })
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -43,8 +58,8 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          {isCounterEnabled && <Counter />}
-          {isArticleRatingEnabled && <ArticleRating articleId={id} />}
+          {counter}
+          {articleRatingCard}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
