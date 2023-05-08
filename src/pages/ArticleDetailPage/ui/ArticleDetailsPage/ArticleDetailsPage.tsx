@@ -1,8 +1,10 @@
 import { ArticleDetails } from '@/entities/Article'
 // eslint-disable-next-line max-len
 // eslint-disable-next-line max-len
+import { Counter } from '@/entities/Counter'
 import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
+import { getFeaturesFlags } from '@/shared/features'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
@@ -28,6 +30,8 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
   const { className } = props
   const { id } = useParams<{ id: string }>()
+  const isArticleRatingEnabled = getFeaturesFlags('isArticleRatingEnabled')
+  const isCounterEnabled = getFeaturesFlags('isCounterEnabled')
 
   if (!id) {
     return null
@@ -39,7 +43,8 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          <ArticleRating articleId={id} />
+          {isCounterEnabled && <Counter />}
+          {isArticleRatingEnabled && <ArticleRating articleId={id} />}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
