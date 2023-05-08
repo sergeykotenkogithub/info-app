@@ -4,7 +4,7 @@ import { ArticleDetails } from '@/entities/Article'
 import { Counter } from '@/entities/Counter'
 import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
-import { getFeatureFlag, toggleFeatures } from '@/shared/features'
+import { toggleFeatures } from '@/shared/features'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
@@ -33,8 +33,6 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
   const { className } = props
   const { id } = useParams<{ id: string }>()
   const { t } = useTranslation()
-  const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
-  // const isCounterEnabled = getFeaturesFlags('isCounterEnabled')
 
   if (!id) {
     return null
