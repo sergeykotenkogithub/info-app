@@ -670,7 +670,8 @@
       "jsonSettings": {
         "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://corporateofficeheadquarters.org/wp-content/uploads/2021/05/Sam-Richman.jpg"
     },
@@ -688,7 +689,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://xakep.ru/wp-content/uploads/2015/08/41885761_xl.jpg"
     },
@@ -706,7 +708,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://xakep.ru/wp-content/uploads/2015/08/41885761_xl.jpg"
     },

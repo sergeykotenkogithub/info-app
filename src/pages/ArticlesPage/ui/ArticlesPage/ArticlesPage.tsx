@@ -1,3 +1,4 @@
+import { ArticlePageGreeting } from '@/features/articlePageGreeting'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
@@ -45,6 +46,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
       >
         <ArticlePageFilters />
         <ArticleInfiniteList className={cls.list} />
+        <ArticlePageGreeting />
       </Page>
     </DynamicModuleLoader>
   )
