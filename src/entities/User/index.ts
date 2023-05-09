@@ -7,6 +7,7 @@ export {
   isUserAdmin,
   isUserManager,
 } from './model/selectors/roleSelectors'
+export { initAuthData } from './model/services/initAuthData'
 export { saveJsonSettings } from './model/services/saveJsonSettings'
 export { userActions, userReducer } from './model/slice/userSlice'
 export type { User, UserSchema } from './model/types/user'
