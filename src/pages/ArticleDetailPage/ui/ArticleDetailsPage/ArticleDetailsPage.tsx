@@ -46,7 +46,11 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
           <ToggleFeatures
             feature="isArticleRatingEnabled"
             on={<ArticleRating articleId={id} />}
-            off={<Card>{t('evaluation-of-articles-will-appear-soon')}</Card>}
+            off={
+              <Card>
+                {t('evaluation-of-articles-will-appear-soon')} <div>1111</div>{' '}
+              </Card>
+            }
           />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
