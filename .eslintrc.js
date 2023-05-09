@@ -82,6 +82,7 @@ module.exports = {
           'as',
           'refName',
           'border',
+          'feature',
         ],
         markupOnly: true,
       },

@@ -1,15 +1,14 @@
 import { ArticleDetails } from '@/entities/Article'
 // eslint-disable-next-line max-len
 // eslint-disable-next-line max-len
-import { Counter } from '@/entities/Counter'
 import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
-import { toggleFeatures } from '@/shared/features'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { Card } from '@/shared/ui/Card'
 import { VStack } from '@/shared/ui/Stack'
 import { Page } from '@/widgets/Page'
@@ -38,26 +37,17 @@ const ArticleDetailsPage = (props: ArticleDetailPageProps) => {
     return null
   }
 
-  const counter = toggleFeatures({
-    name: 'isCounterEnabled',
-    on: () => <div>11111</div>,
-    off: () => <Counter />,
-  })
-
-  const articleRatingCard = toggleFeatures({
-    name: 'isArticleRatingEnabled',
-    on: () => <ArticleRating articleId={id} />,
-    off: () => <Card>{t('evaluation-of-articles-will-appear-soon')}</Card>,
-  })
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.articleDetailPage, {}, [className])}>
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          {counter}
-          {articleRatingCard}
+          <ToggleFeatures
+            feature="isArticleRatingEnabled"
+            on={<ArticleRating articleId={id} />}
+            off={<Card>{t('evaluation-of-articles-will-appear-soon')}</Card>}
+          />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>

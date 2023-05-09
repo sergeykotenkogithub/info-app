@@ -1,5 +1,5 @@
 import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage'
-import { setFeatureFlag } from '@/shared/features'
+import { setFeatureFlag } from '@/shared/lib/features'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { initAuthData } from '../services/initAuthData'
 import { saveJsonSettings } from '../services/saveJsonSettings'
