@@ -47,3 +47,21 @@
     opacity: 0;
   }
 }
+
+.sidebarRedesigned {
+  border-radius: 32px;
+  width: 220px;
+  height: 100%;
+  background: var(--light-bg-redesigned);
+}
+
+.appLogo {
+  left: 80px;
+  padding-top: 40px;
+  width: 65px;
+  height: 65px;
+
+  svg {
+    position: relative;
+  }
+}

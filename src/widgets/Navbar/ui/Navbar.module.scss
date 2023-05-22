@@ -1,10 +1,14 @@
-.Navbar {
+.navbar {
   display: flex;
   align-items: center;
   padding: 20px;
   width: 100%;
   height: var(--navbar-height);
   background: var(--inverted-bg-color);
+}
+
+.navbarRedesigned {
+  padding: 16px;
 }
 
 .links,

@@ -3,6 +3,7 @@
 import { StateSchema } from '@/app/providers/StoreProvider'
 import { getScrollSaveByPath, scrollSaveActions } from '@/features/ScrollSave'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { toggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
@@ -53,7 +54,15 @@ export const Page = (props: PageProps) => {
   return (
     <main
       ref={wrapperRef}
-      className={classNames(cls.page, {}, [className])}
+      className={classNames(
+        toggleFeatures({
+          name: 'isAppRedesigned',
+          on: () => cls.pageRedesigned,
+          off: () => cls.page,
+        }),
+        {},
+        [className]
+      )}
       onScroll={onScroll}
       id={PAGE_ID}
       // eslint-disable-next-line react/destructuring-assignment

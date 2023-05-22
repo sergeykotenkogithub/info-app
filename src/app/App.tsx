@@ -2,7 +2,9 @@
 import { FC, Suspense, useEffect } from 'react'
 
 import { getUserInited, initAuthData } from '@/entities/User'
+import { MainLayout } from '@/shared/layouts/MainLayout'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Navbar } from '@/widgets/Navbar'
 import { PageLoader } from '@/widgets/PageLoader'
@@ -23,16 +25,32 @@ const App: FC = () => {
   }
 
   return (
-    <div className={classNames('app', {}, [])}>
-      <Suspense fallback="">
-        <Navbar />
-
-        <div className="content-page">
-          <Sidebar />
-          {inited && <AppRouter />}
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      off={
+        <div className={classNames('app', {}, [])}>
+          <Suspense fallback="">
+            <Navbar />
+            <div className="content-page">
+              <Sidebar />
+              <AppRouter />
+            </div>
+          </Suspense>
         </div>
-      </Suspense>
-    </div>
+      }
+      on={
+        <div className={classNames('app_redesigned', {}, [])}>
+          <Suspense fallback="">
+            <MainLayout
+              header={<Navbar />}
+              content={<AppRouter />}
+              sidebar={<Sidebar />}
+              toolbar={<div>1111</div>}
+            />
+          </Suspense>
+        </div>
+      }
+    />
   )
 }
 
