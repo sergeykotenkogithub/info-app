@@ -3,9 +3,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { Button } from '@/shared/ui/Button'
-import { Input } from '@/shared/ui/Input'
-import { HStack } from '@/shared/ui/Stack'
+import { HStack } from '@/shared/ui/deprecated/Stack'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
@@ -18,6 +16,8 @@ import {
   addCommentFormReducer,
 } from '../../model/slices/addCommentFormSlice'
 
+import { Button } from '@/shared/ui/deprecated/Button'
+import { Input } from '@/shared/ui/deprecated/Input'
 import cls from './AddCommentForm.module.scss'
 
 export interface AddCommentFormProps {

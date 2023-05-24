@@ -1,4 +1,4 @@
-import { ListBox } from '@/shared/ui/Popups'
+import { ListBox } from '@/shared/ui/deprecated/Popups'
 import { FC, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Country } from '../../model/types/country'
