@@ -12,6 +12,12 @@ interface AppLinkProps extends LinkProps {
   activeClassName?: string
 }
 
+// export const typedMemo: <T>(c: T) => T = memo
+// export const typedForwardRef: <T, P = object>(
+//   render: (props: P, ref: Ref<T>) => ReactElement | null
+// ) => (props: PropsWithoutRef<P> & RefAttributes<T>) => ReactElement | null =
+//   forwardRef
+
 export const AppLink = memo((props: AppLinkProps) => {
   const {
     to,
