@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unused-prop-types */
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { ReactNode, memo } from 'react'
+import { ReactNode, forwardRef, memo } from 'react'
 import { LinkProps, NavLink } from 'react-router-dom'
 import cls from './AppLink.module.scss'
 
@@ -18,28 +19,30 @@ interface AppLinkProps extends LinkProps {
 // ) => (props: PropsWithoutRef<P> & RefAttributes<T>) => ReactElement | null =
 //   forwardRef
 
-export const AppLink = memo((props: AppLinkProps) => {
-  const {
-    to,
-    className,
-    children,
-    variant = 'primary',
-    activeClassName = '',
-    ...otherProps
-  } = props
+export const AppLink = memo(
+  forwardRef<HTMLLinkElement, AppLinkProps>((props: AppLinkProps, ref) => {
+    const {
+      to,
+      className,
+      children,
+      variant = 'primary',
+      activeClassName = '',
+      ...otherProps
+    } = props
 
-  return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        classNames(cls.AppLink, { [activeClassName]: isActive }, [
-          className,
-          cls[variant],
-        ])
-      }
-      {...otherProps}
-    >
-      {children}
-    </NavLink>
-  )
-})
+    return (
+      <NavLink
+        to={to}
+        className={({ isActive }) =>
+          classNames(cls.AppLink, { [activeClassName]: isActive }, [
+            className,
+            cls[variant],
+          ])
+        }
+        {...otherProps}
+      >
+        {children}
+      </NavLink>
+    )
+  })
+)

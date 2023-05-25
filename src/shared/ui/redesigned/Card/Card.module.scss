@@ -1,5 +1,4 @@
 .Card {
-  border-radius: 12px;
   padding: 24px;
 }
 
@@ -17,6 +16,15 @@
 
 .outlined {
   border: 1px solid var(--accent-redesigned);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.normal {
+  border-radius: 12px;
+}
+
+.round {
+  border-radius: 40px;
 }
 
 .max {

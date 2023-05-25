@@ -1,19 +1,20 @@
-import { ArticleSortSelector } from '@/features/ArticleSortSelector'
-import { ArticleTypeTabs } from '@/features/ArticleTypeTabs'
-import { ArticleViewSelector } from '@/features/ArticleViewSelector'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Card } from '@/shared/ui/deprecated/Card'
 import { Input } from '@/shared/ui/deprecated/Input'
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
+import cls from './ArticlesPageFilters.module.scss'
 
+import { ArticleSortSelector } from '@/features/ArticleSortSelector'
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs'
+import { ArticleViewSelector } from '@/features/ArticleViewSelector'
 import { useArticleFilters } from '../../lib/hooks/useArticleFilters'
-import cls from './ArticlePageFilters.module.scss'
 
-interface ArticlePageFiltersProps {
+interface ArticlesPageFiltersProps {
   className?: string
 }
 
-export const ArticlePageFilters = (props: ArticlePageFiltersProps) => {
+export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
   const { className } = props
   const { t } = useTranslation()
   const {
@@ -30,7 +31,7 @@ export const ArticlePageFilters = (props: ArticlePageFiltersProps) => {
   } = useArticleFilters()
 
   return (
-    <div className={classNames(cls.articlePageFilters, {}, [className])}>
+    <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
       <div className={cls.sortWrapper}>
         <ArticleSortSelector
           order={order}
@@ -44,7 +45,7 @@ export const ArticlePageFilters = (props: ArticlePageFiltersProps) => {
         <Input
           onChange={onChangeSearch}
           value={search}
-          placeholder={t('search')}
+          placeholder={t('Поиск')}
         />
       </Card>
       <ArticleTypeTabs
@@ -54,4 +55,4 @@ export const ArticlePageFilters = (props: ArticlePageFiltersProps) => {
       />
     </div>
   )
-}
+})

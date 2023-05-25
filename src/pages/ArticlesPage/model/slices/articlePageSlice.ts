@@ -27,9 +27,9 @@ const articlesPageSlice = createSlice({
   name: 'articlesPageSlice',
   initialState: articlesAdapter.getInitialState<ArticlesPageSchema>({
     isLoading: false,
+    error: undefined,
     ids: [],
     entities: {},
-    error: undefined,
     view: ArticleView.SMALL,
     page: 1,
     hasMore: true,
@@ -96,6 +96,5 @@ const articlesPageSlice = createSlice({
   },
 })
 
-// eslint-disable-next-line operator-linebreak
 export const { reducer: articlesPageReducer, actions: articlesPageActions } =
   articlesPageSlice
