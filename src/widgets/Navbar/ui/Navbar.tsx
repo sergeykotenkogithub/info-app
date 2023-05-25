@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-wrap-multilines */
-/* eslint-disable @typescript-eslint/indent */
-/* eslint-disable indent */
 import { getUserAuthData } from '@/entities/User'
 import { LoginModal } from '@/features/AuthByUsername'
 import { AvatarDropdown } from '@/features/avatarDropdown'
@@ -39,7 +36,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
       <ToggleFeatures
         feature="isAppRedesigned"
         on={
-          <header className={classNames(cls.navbarRedesigned, {}, [className])}>
+          <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
             <HStack gap="16" className={cls.actions}>
               <NotificationButton />
               <AvatarDropdown />
@@ -47,10 +44,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           </header>
         }
         off={
-          <header className={classNames(cls.navbar, {}, [className])}>
+          <header className={classNames(cls.Navbar, {}, [className])}>
             <Text
               className={cls.appName}
-              title={t('info-app')}
+              title={t('Ulbi TV App')}
               theme={TextTheme.INVERTED}
             />
             <AppLink
@@ -58,7 +55,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
               theme={AppLinkTheme.SECONDARY}
               className={cls.createBtn}
             >
-              {t('create-article')}
+              {t('Создать статью')}
             </AppLink>
             <HStack gap="16" className={cls.actions}>
               <NotificationButton />
@@ -77,10 +74,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         className={cls.links}
         onClick={onShowModal}
       >
-        {t('to-come-in')}
+        {t('Войти')}
       </Button>
       {isAuthModal && (
-        <LoginModal onClose={onCloseModal} isOpen={isAuthModal} />
+        <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       )}
     </header>
   )
