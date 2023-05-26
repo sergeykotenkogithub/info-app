@@ -3,10 +3,11 @@ import {
   AnimationProvider,
   useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider'
+import { toggleFeatures } from '@/shared/lib/features'
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
-import { Portal } from '@headlessui/react'
 import { ReactNode, memo, useCallback, useEffect } from 'react'
-import { Overlay } from '../../redesigned/Overlay'
+import { Overlay } from '../Overlay'
+import { Portal } from '../Portal'
 import cls from './Drawer.module.scss'
 
 interface DrawerProps {
@@ -19,10 +20,6 @@ interface DrawerProps {
 
 const height = window.innerHeight - 100
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 export const DrawerContent = memo((props: DrawerProps) => {
   const { Spring, Gesture } = useAnimationLibs()
   const [{ y }, api] = Spring.useSpring(() => ({ y: height }))
@@ -83,9 +80,18 @@ export const DrawerContent = memo((props: DrawerProps) => {
   const display = y.to((py) => (py < height ? 'block' : 'none'))
 
   return (
-    <Portal>
+    <Portal element={document.getElementById('app') ?? document.body}>
       <div
-        className={classNames(cls.drawer, {}, [className, theme, 'app_drawer'])}
+        className={classNames(cls.drawer, {}, [
+          className,
+          theme,
+          'app_drawer',
+          toggleFeatures({
+            name: 'isAppRedesigned',
+            on: () => cls.drawerNew,
+            off: () => cls.drawerOld,
+          }),
+        ])}
       >
         <Overlay onClick={close} />
         <Spring.a.div
