@@ -10,15 +10,16 @@ import {
   getRouteProfile,
 } from '@/shared/const/router'
 import { toggleFeatures } from '@/shared/lib/features'
-import { createSelector } from '@reduxjs/toolkit'
 import { SidebarItemType } from '../types/sidebar'
 
 import AboutIcon from '@/shared/assets/icons/Info.svg'
 import ArticleIcon from '@/shared/assets/icons/article.svg'
 import ProfileIcon from '@/shared/assets/icons/avatar.svg'
 import MainIcon from '@/shared/assets/icons/home.svg'
+import { useSelector } from 'react-redux'
 
-export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
+export const useSidebarItems = () => {
+  const userData = useSelector(getUserAuthData)
   const sidebarItemsList: SidebarItemType[] = [
     {
       path: getRouteMain(),
@@ -66,4 +67,4 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
   }
 
   return sidebarItemsList
-})
+}
