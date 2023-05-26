@@ -44,13 +44,11 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
   const validateErrors = useSelector(getProfileValidateErrors)
 
   const validateErrorTranslates = {
-    [ValidateProfileError.SERVER_ERROR]: t('server-error-while-maintaining'),
-    [ValidateProfileError.INCORRECT_COUNTRY]: t('incorrect-region'),
-    [ValidateProfileError.NO_DATA]: t('data-is-not-indicated'),
-    [ValidateProfileError.INCORRECT_USER_DATA]: t(
-      'name-and-surname-are-required'
-    ),
-    [ValidateProfileError.INCORRECT_AGE]: t('incorrect-age'),
+    [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный регион'),
+    [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
+    [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
   }
 
   useInitialEffect(() => {
@@ -117,14 +115,13 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <VStack gap="8" max className={classNames('', {}, [className])}>
+      <VStack gap="16" max className={classNames('', {}, [className])}>
         <EditableProfileCardHeader />
         {validateErrors?.length &&
-          validateErrors.map((err: string) => (
+          validateErrors.map((err) => (
             <Text
               key={err}
               theme={TextTheme.ERROR}
-              // @ts-ignore
               text={validateErrorTranslates[err]}
               data-testid="EditableProfileCard.Error"
             />
