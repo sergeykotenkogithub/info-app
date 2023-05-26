@@ -60,5 +60,8 @@
   "thank-you-for-the-assessment": "Thank you for the assessment",
   "evaluation-of-articles-will-appear-soon": "Evaluation of articles will appear soon",
   "welcome-to-the-page-of-articles": "Welcome to the page of articles",
-  "here-you-can-search-and-view-articles-on-various-topics": "Here you can search and view articles on various topics"
+  "here-you-can-search-and-view-articles-on-various-topics": "Here you can search and view articles on various topics",
+  "{{count}} просмотров_zero": "{{count}} views",
+  "{{count}} просмотров_one": "{{count}} view",
+  "{{count}} просмотров_other": "{{count}} views"
 }

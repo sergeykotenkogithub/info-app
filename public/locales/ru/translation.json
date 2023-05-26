@@ -60,5 +60,9 @@
   "thank-you-for-the-assessment": "Спасибо за оценку",
   "evaluation-of-articles-will-appear-soon": "Оценка статей скоро появится",
   "welcome-to-the-page-of-articles": "Добро пожаловать на страницу статей",
-  "here-you-can-search-and-view-articles-on-various-topics": "Здесь вы можете искать и просматривать статьи на различные темы"
+  "here-you-can-search-and-view-articles-on-various-topics": "Здесь вы можете искать и просматривать статьи на различные темы",
+  "{{count}} просмотров_zero": "{{count}} просмотров",
+  "{{count}} просмотров_one": "{{count}} просмотр",
+  "{{count}} просмотров_few": "{{count}} просмотра",
+  "{{count}} просмотров_many": "{{count}} просмотров"
 }

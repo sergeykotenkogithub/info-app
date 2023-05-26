@@ -1,4 +1,4 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
+import { classNames, Mods } from '@/shared/lib/classNames/classNames'
 import { HTMLAttributes, memo, ReactNode } from 'react'
 import cls from './Card.module.scss'
 
@@ -13,6 +13,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   max?: boolean
   padding?: CardPadding
   border?: CardBorder
+  fullHeight?: boolean
 }
 
 const mapPaddingToClass: Record<CardPadding, string> = {
@@ -30,14 +31,20 @@ export const Card = memo((props: CardProps) => {
     max,
     padding = '8',
     border = 'normal',
+    fullHeight,
     ...otherProps
   } = props
 
   const paddingClass = mapPaddingToClass[padding]
 
+  const mods: Mods = {
+    [cls.max]: max,
+    [cls.fullHeight]: fullHeight,
+  }
+
   return (
     <div
-      className={classNames(cls.Card, { [cls.max]: max }, [
+      className={classNames(cls.Card, mods, [
         className,
         cls[variant],
         cls[paddingClass],
