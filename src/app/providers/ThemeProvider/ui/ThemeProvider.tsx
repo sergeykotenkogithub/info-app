@@ -23,6 +23,10 @@ const ThemeProvider: FC<ThemeProviderProps> = (props) => {
     }
   }, [defaultTheme, isThemeInited])
 
+  useEffect(() => {
+    document.body.className = theme
+  }, [theme])
+
   const defaultProp = useMemo(
     () => ({
       theme,
