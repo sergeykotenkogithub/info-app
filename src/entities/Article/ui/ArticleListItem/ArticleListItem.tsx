@@ -1,10 +1,9 @@
+/* eslint-disable import/no-cycle */
 import { ToggleFeatures } from '@/shared/lib/features'
 import { HTMLAttributeAnchorTarget, memo } from 'react'
 import { ArticleView } from '../../model/consts/articleConsts'
 import { Article } from '../../model/types/article'
-// eslint-disable-next-line import/no-cycle
 import { ArticleListItemDeprecated } from './ArticleListItemDeprecated/ArticleListItemDeprecated'
-// eslint-disable-next-line import/no-cycle
 import { ArticleListItemRedesigned } from './ArticleListItemRedesigned/ArticleListItemRedesigned'
 
 export interface ArticleListItemProps {
