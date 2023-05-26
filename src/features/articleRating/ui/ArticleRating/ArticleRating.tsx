@@ -1,7 +1,7 @@
 import { RatingCard } from '@/entities/Rating'
 import { getUserAuthData } from '@/entities/User'
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton'
-import { useCallback } from 'react'
+import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useGetArticleRating, useRateArticle } from '../../api/articleRatingApi'
@@ -11,34 +11,34 @@ export interface ArticleRatingProps {
   articleId: string
 }
 
-const ArticleRating = (props: ArticleRatingProps) => {
+const ArticleRating = memo((props: ArticleRatingProps) => {
   const { className, articleId } = props
   const { t } = useTranslation()
   const userData = useSelector(getUserAuthData)
-  const userId = userData?.id ?? ''
 
   const { data, isLoading } = useGetArticleRating({
     articleId,
-    userId,
+    userId: userData?.id ?? '',
   })
-
   const [rateArticleMutation] = useRateArticle()
 
   const handleRateArticle = useCallback(
     (starsCount: number, feedback?: string) => {
       try {
         rateArticleMutation({
-          userId,
+          userId: userData?.id ?? '',
           articleId,
           rate: starsCount,
           feedback,
         })
       } catch (e) {
+        // handle error
         console.log(e)
       }
     },
-    [articleId, rateArticleMutation, userId]
+    [articleId, rateArticleMutation, userData?.id]
   )
+
   const onAccept = useCallback(
     (starsCount: number, feedback?: string) => {
       handleRateArticle(starsCount, feedback)
@@ -65,13 +65,13 @@ const ArticleRating = (props: ArticleRatingProps) => {
       onAccept={onAccept}
       rate={rating?.rate}
       className={className}
-      title={t('rate-this-article')}
+      title={t('Оцените статью')}
       feedbackTitle={t(
-        'leave-your-feedback-on-the-article-it-will-help-improve-the-quality'
+        'Оставьте свой отзыв о статье, это поможет улучшить качество'
       )}
       hasFeedback
     />
   )
-}
+})
 
 export default ArticleRating
