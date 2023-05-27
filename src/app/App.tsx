@@ -1,5 +1,5 @@
 /* eslint-disable import/order */
-import { FC, Suspense, useEffect } from 'react'
+import { FC, Suspense, memo, useEffect } from 'react'
 
 import { getUserInited, initAuthData } from '@/entities/User'
 import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout'
@@ -13,9 +13,10 @@ import { PageLoader } from '@/widgets/PageLoader'
 import { Sidebar } from '@/widgets/Sidebar'
 import { useSelector } from 'react-redux'
 import { useAppToolbar } from './lib/useAppToolbar'
+import { withTheme } from './providers/ThemeProvider/ui/withTheme'
 import { AppRouter } from './providers/router'
 
-const App: FC = () => {
+const App: FC = memo(() => {
   const dispatch = useAppDispatch()
   const inited = useSelector(getUserInited)
   const { theme } = useTheme()
@@ -69,6 +70,6 @@ const App: FC = () => {
       }
     />
   )
-}
+})
 
-export default App
+export default withTheme(App)
