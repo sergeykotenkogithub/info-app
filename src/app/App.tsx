@@ -2,10 +2,12 @@
 import { FC, Suspense, useEffect } from 'react'
 
 import { getUserInited, initAuthData } from '@/entities/User'
+import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout'
 import { MainLayout } from '@/shared/layouts/MainLayout'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
 import { Navbar } from '@/widgets/Navbar'
 import { PageLoader } from '@/widgets/PageLoader'
 import { Sidebar } from '@/widgets/Sidebar'
@@ -15,6 +17,7 @@ import { AppRouter } from './providers/router'
 const App: FC = () => {
   const dispatch = useAppDispatch()
   const inited = useSelector(getUserInited)
+  const { theme } = useTheme()
 
   useEffect(() => {
     if (!inited) {
@@ -23,7 +26,17 @@ const App: FC = () => {
   }, [dispatch, inited])
 
   if (!inited) {
-    return <PageLoader />
+    return (
+      <ToggleFeatures
+        feature="isAppRedesigned"
+        on={
+          <div id="app" className={classNames('app_redesigned', {}, [theme])}>
+            <AppLoaderLayout />{' '}
+          </div>
+        }
+        off={<PageLoader />}
+      />
+    )
   }
 
   return (

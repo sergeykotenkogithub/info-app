@@ -675,7 +675,8 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "isArticlePageWasOpened": true
+        "isArticlePageWasOpened": true,
+        "theme": "app_dark_theme"
       },
       "avatar": "https://corporateofficeheadquarters.org/wp-content/uploads/2021/05/Sam-Richman.jpg"
     },
@@ -691,7 +692,7 @@
         "isCounterEnabled": false
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlePageWasOpened": true
