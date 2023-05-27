@@ -12,12 +12,14 @@ import { Navbar } from '@/widgets/Navbar'
 import { PageLoader } from '@/widgets/PageLoader'
 import { Sidebar } from '@/widgets/Sidebar'
 import { useSelector } from 'react-redux'
+import { useAppToolbar } from './lib/useAppToolbar'
 import { AppRouter } from './providers/router'
 
 const App: FC = () => {
   const dispatch = useAppDispatch()
   const inited = useSelector(getUserInited)
   const { theme } = useTheme()
+  const toolbar = useAppToolbar()
 
   useEffect(() => {
     if (!inited) {
@@ -60,7 +62,7 @@ const App: FC = () => {
               header={<Navbar />}
               content={<AppRouter />}
               sidebar={<Sidebar />}
-              toolbar={<div>1111</div>}
+              toolbar={toolbar}
             />
           </Suspense>
         </div>
